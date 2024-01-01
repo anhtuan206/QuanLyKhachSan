@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ckb_themkhacho = new System.Windows.Forms.CheckBox();
             this.txt_idchitietdatphong = new System.Windows.Forms.TextBox();
-            this.ckb_suachitietdatphong = new System.Windows.Forms.CheckBox();
+            this.ckb_capnhatchitietdatphong = new System.Windows.Forms.CheckBox();
             this.txt_iddondatphong = new System.Windows.Forms.TextBox();
             this.lbl_QuanLyDatPhong = new System.Windows.Forms.Label();
-            this.ckb_dondatphong = new System.Windows.Forms.CheckBox();
+            this.ckb_suadondatphong = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_quanlydatphong = new System.Windows.Forms.TabPage();
             this.pan_chitietdatphong = new System.Windows.Forms.Panel();
             this.pan_khacho = new System.Windows.Forms.Panel();
+            this.lvKhachO = new System.Windows.Forms.ListView();
+            this.idkhacho = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.khacho_hovaten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_xoakhacho = new System.Windows.Forms.Button();
+            this.btn_themkhacho = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pan_chitietdatphonglist = new System.Windows.Forms.Panel();
@@ -49,20 +52,27 @@
             this.btn_xoachitietdatphong = new System.Windows.Forms.Button();
             this.btn_suachitietdatphong = new System.Windows.Forms.Button();
             this.btn_themchitietdatphong = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvChiTietDatPhong = new System.Windows.Forms.ListView();
+            this.ngaynhanphong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ngaytraphong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sophong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.idchitietdatphong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.idphong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pan_dichvu = new System.Windows.Forms.Panel();
+            this.lvSuDungDichVu = new System.Windows.Forms.ListView();
+            this.sddv_ngaysudung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sddd_tendichvu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sddv_soluong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sddv_dongia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sddv_thanhtien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sddv_idsudungdichvu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_xoasudungdichvu = new System.Windows.Forms.Button();
+            this.btn_themsudungdichvu = new System.Windows.Forms.Button();
+            this.txt_soluongsudungdichvu = new System.Windows.Forms.TextBox();
+            this.cbb_themsudungdichvu = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pan_dondatphong = new System.Windows.Forms.Panel();
@@ -72,19 +82,27 @@
             this.tenkhachhang = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmndkhach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sdtkhach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.emailkhach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tennhanvien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ghichu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.idkhach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.idnhanvien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pan_dondatphong_ctrl = new System.Windows.Forms.Panel();
-            this.txt_idkhachphong = new System.Windows.Forms.TextBox();
-            this.wlbl_khachdat = new System.Windows.Forms.Label();
+            this.cbb_nhanviendatphong = new System.Windows.Forms.ComboBox();
+            this.txt_tenkhachdatphong = new System.Windows.Forms.TextBox();
+            this.txt_idkhachdatphong = new System.Windows.Forms.TextBox();
+            this.wlbl_khachdatphong = new System.Windows.Forms.Label();
             this.wlbl_ngaydat = new System.Windows.Forms.Label();
             this.txt_ghichu = new System.Windows.Forms.RichTextBox();
-            this.btn_khachdat = new System.Windows.Forms.Button();
+            this.btn_suadondatphong = new System.Windows.Forms.Button();
+            this.btn_chonkhachdat = new System.Windows.Forms.Button();
+            this.btn_themdondatphong = new System.Windows.Forms.Button();
             this.txt_ngaydat = new System.Windows.Forms.DateTimePicker();
+            this.btn_xoadondatphong = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.lbl_ghichu = new System.Windows.Forms.Label();
             this.lbl_khachdat = new System.Windows.Forms.Label();
             this.lbl_ngaydat = new System.Windows.Forms.Label();
-            this.btn_xoadondatphong = new System.Windows.Forms.Button();
-            this.btn_suadondatphong = new System.Windows.Forms.Button();
-            this.btn_themdondatphong = new System.Windows.Forms.Button();
             this.tab_khachhang = new System.Windows.Forms.TabPage();
             this.lvKhachHang = new System.Windows.Forms.ListView();
             this.idkhachhang = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -120,7 +138,7 @@
             this.btn_xoakhachhang = new System.Windows.Forms.Button();
             this.btn_suakhachhang = new System.Windows.Forms.Button();
             this.btn_themkhachhang = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabDichvu = new System.Windows.Forms.TabPage();
             this.lvDichVu = new System.Windows.Forms.ListView();
             this.iddichvu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tendichvu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -141,10 +159,6 @@
             this.btn_xoadichvu = new System.Windows.Forms.Button();
             this.btn_suadichvu = new System.Windows.Forms.Button();
             this.btn_themdichvu = new System.Windows.Forms.Button();
-            this.emailkhach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tennhanvien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.idkhach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.idnhanvien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tab_quanlydatphong.SuspendLayout();
@@ -163,22 +177,35 @@
             this.tab_khachhang.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabDichvu.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ckb_themkhacho);
             this.panel1.Controls.Add(this.txt_idchitietdatphong);
-            this.panel1.Controls.Add(this.ckb_suachitietdatphong);
+            this.panel1.Controls.Add(this.ckb_capnhatchitietdatphong);
             this.panel1.Controls.Add(this.txt_iddondatphong);
             this.panel1.Controls.Add(this.lbl_QuanLyDatPhong);
-            this.panel1.Controls.Add(this.ckb_dondatphong);
+            this.panel1.Controls.Add(this.ckb_suadondatphong);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1147, 50);
+            this.panel1.Size = new System.Drawing.Size(1184, 50);
             this.panel1.TabIndex = 0;
+            // 
+            // ckb_themkhacho
+            // 
+            this.ckb_themkhacho.AutoSize = true;
+            this.ckb_themkhacho.Location = new System.Drawing.Point(599, 16);
+            this.ckb_themkhacho.Name = "ckb_themkhacho";
+            this.ckb_themkhacho.Size = new System.Drawing.Size(15, 14);
+            this.ckb_themkhacho.TabIndex = 15;
+            this.ckb_themkhacho.TabStop = false;
+            this.ckb_themkhacho.UseVisualStyleBackColor = true;
+            this.ckb_themkhacho.Visible = false;
+            this.ckb_themkhacho.CheckedChanged += new System.EventHandler(this.ckb_themkhacho_CheckedChanged);
             // 
             // txt_idchitietdatphong
             // 
@@ -186,17 +213,20 @@
             this.txt_idchitietdatphong.Name = "txt_idchitietdatphong";
             this.txt_idchitietdatphong.Size = new System.Drawing.Size(58, 20);
             this.txt_idchitietdatphong.TabIndex = 14;
+            this.txt_idchitietdatphong.TabStop = false;
             this.txt_idchitietdatphong.Visible = false;
             // 
-            // ckb_suachitietdatphong
+            // ckb_capnhatchitietdatphong
             // 
-            this.ckb_suachitietdatphong.AutoSize = true;
-            this.ckb_suachitietdatphong.Location = new System.Drawing.Point(474, 16);
-            this.ckb_suachitietdatphong.Name = "ckb_suachitietdatphong";
-            this.ckb_suachitietdatphong.Size = new System.Drawing.Size(15, 14);
-            this.ckb_suachitietdatphong.TabIndex = 13;
-            this.ckb_suachitietdatphong.UseVisualStyleBackColor = true;
-            this.ckb_suachitietdatphong.Visible = false;
+            this.ckb_capnhatchitietdatphong.AutoSize = true;
+            this.ckb_capnhatchitietdatphong.Location = new System.Drawing.Point(474, 16);
+            this.ckb_capnhatchitietdatphong.Name = "ckb_capnhatchitietdatphong";
+            this.ckb_capnhatchitietdatphong.Size = new System.Drawing.Size(15, 14);
+            this.ckb_capnhatchitietdatphong.TabIndex = 13;
+            this.ckb_capnhatchitietdatphong.TabStop = false;
+            this.ckb_capnhatchitietdatphong.UseVisualStyleBackColor = true;
+            this.ckb_capnhatchitietdatphong.Visible = false;
+            this.ckb_capnhatchitietdatphong.CheckedChanged += new System.EventHandler(this.ckb_capnhatchitietdatphong_CheckedChanged);
             // 
             // txt_iddondatphong
             // 
@@ -204,6 +234,7 @@
             this.txt_iddondatphong.Name = "txt_iddondatphong";
             this.txt_iddondatphong.Size = new System.Drawing.Size(50, 20);
             this.txt_iddondatphong.TabIndex = 12;
+            this.txt_iddondatphong.TabStop = false;
             this.txt_iddondatphong.Visible = false;
             // 
             // lbl_QuanLyDatPhong
@@ -216,27 +247,28 @@
             this.lbl_QuanLyDatPhong.TabIndex = 0;
             this.lbl_QuanLyDatPhong.Text = "Quản lý đặt phòng";
             // 
-            // ckb_dondatphong
+            // ckb_suadondatphong
             // 
-            this.ckb_dondatphong.AutoSize = true;
-            this.ckb_dondatphong.Location = new System.Drawing.Point(364, 20);
-            this.ckb_dondatphong.Name = "ckb_dondatphong";
-            this.ckb_dondatphong.Size = new System.Drawing.Size(15, 14);
-            this.ckb_dondatphong.TabIndex = 11;
-            this.ckb_dondatphong.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ckb_dondatphong.UseVisualStyleBackColor = true;
-            this.ckb_dondatphong.Visible = false;
+            this.ckb_suadondatphong.AutoSize = true;
+            this.ckb_suadondatphong.Location = new System.Drawing.Point(364, 20);
+            this.ckb_suadondatphong.Name = "ckb_suadondatphong";
+            this.ckb_suadondatphong.Size = new System.Drawing.Size(15, 14);
+            this.ckb_suadondatphong.TabIndex = 11;
+            this.ckb_suadondatphong.TabStop = false;
+            this.ckb_suadondatphong.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ckb_suadondatphong.UseVisualStyleBackColor = true;
+            this.ckb_suadondatphong.Visible = false;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tab_quanlydatphong);
             this.tabControl1.Controls.Add(this.tab_khachhang);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabDichvu);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 50);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1147, 555);
+            this.tabControl1.Size = new System.Drawing.Size(1184, 651);
             this.tabControl1.TabIndex = 1;
             // 
             // tab_quanlydatphong
@@ -246,7 +278,7 @@
             this.tab_quanlydatphong.Location = new System.Drawing.Point(4, 22);
             this.tab_quanlydatphong.Name = "tab_quanlydatphong";
             this.tab_quanlydatphong.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_quanlydatphong.Size = new System.Drawing.Size(1139, 529);
+            this.tab_quanlydatphong.Size = new System.Drawing.Size(1176, 625);
             this.tab_quanlydatphong.TabIndex = 0;
             this.tab_quanlydatphong.Text = "Quản lý đặt phòng";
             this.tab_quanlydatphong.UseVisualStyleBackColor = true;
@@ -257,58 +289,80 @@
             this.pan_chitietdatphong.Controls.Add(this.pan_chitietdatphonglist);
             this.pan_chitietdatphong.Controls.Add(this.pan_dichvu);
             this.pan_chitietdatphong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pan_chitietdatphong.Location = new System.Drawing.Point(3, 233);
+            this.pan_chitietdatphong.Location = new System.Drawing.Point(3, 300);
             this.pan_chitietdatphong.Name = "pan_chitietdatphong";
-            this.pan_chitietdatphong.Size = new System.Drawing.Size(1133, 293);
+            this.pan_chitietdatphong.Size = new System.Drawing.Size(1170, 322);
             this.pan_chitietdatphong.TabIndex = 1;
             // 
             // pan_khacho
             // 
+            this.pan_khacho.Controls.Add(this.lvKhachO);
             this.pan_khacho.Controls.Add(this.panel6);
             this.pan_khacho.Controls.Add(this.panel3);
             this.pan_khacho.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pan_khacho.Location = new System.Drawing.Point(410, 0);
             this.pan_khacho.Name = "pan_khacho";
-            this.pan_khacho.Size = new System.Drawing.Size(384, 293);
+            this.pan_khacho.Size = new System.Drawing.Size(370, 322);
             this.pan_khacho.TabIndex = 2;
+            // 
+            // lvKhachO
+            // 
+            this.lvKhachO.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.idkhacho,
+            this.khacho_hovaten});
+            this.lvKhachO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvKhachO.FullRowSelect = true;
+            this.lvKhachO.GridLines = true;
+            this.lvKhachO.HideSelection = false;
+            this.lvKhachO.Location = new System.Drawing.Point(0, 37);
+            this.lvKhachO.Name = "lvKhachO";
+            this.lvKhachO.Size = new System.Drawing.Size(370, 247);
+            this.lvKhachO.TabIndex = 2;
+            this.lvKhachO.TabStop = false;
+            this.lvKhachO.UseCompatibleStateImageBehavior = false;
+            this.lvKhachO.View = System.Windows.Forms.View.Details;
+            this.lvKhachO.SelectedIndexChanged += new System.EventHandler(this.lvKhachO_SelectedIndexChanged);
+            // 
+            // idkhacho
+            // 
+            this.idkhacho.Text = "idkhacho";
+            // 
+            // khacho_hovaten
+            // 
+            this.khacho_hovaten.Text = "Khách ở phòng";
+            this.khacho_hovaten.Width = 90;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button6);
-            this.panel6.Controls.Add(this.button5);
-            this.panel6.Controls.Add(this.button4);
+            this.panel6.Controls.Add(this.btn_xoakhacho);
+            this.panel6.Controls.Add(this.btn_themkhacho);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 255);
+            this.panel6.Location = new System.Drawing.Point(0, 284);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(384, 38);
+            this.panel6.Size = new System.Drawing.Size(370, 38);
             this.panel6.TabIndex = 1;
             // 
-            // button6
+            // btn_xoakhacho
             // 
-            this.button6.Location = new System.Drawing.Point(279, 9);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_xoakhacho.Enabled = false;
+            this.btn_xoakhacho.Location = new System.Drawing.Point(91, 11);
+            this.btn_xoakhacho.Name = "btn_xoakhacho";
+            this.btn_xoakhacho.Size = new System.Drawing.Size(82, 23);
+            this.btn_xoakhacho.TabIndex = 12;
+            this.btn_xoakhacho.Text = "Xóa khách";
+            this.btn_xoakhacho.UseVisualStyleBackColor = true;
+            this.btn_xoakhacho.Click += new System.EventHandler(this.btn_xoakhacho_Click);
             // 
-            // button5
+            // btn_themkhacho
             // 
-            this.button5.Location = new System.Drawing.Point(160, 9);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(27, 9);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_themkhacho.Enabled = false;
+            this.btn_themkhacho.Location = new System.Drawing.Point(7, 11);
+            this.btn_themkhacho.Name = "btn_themkhacho";
+            this.btn_themkhacho.Size = new System.Drawing.Size(79, 23);
+            this.btn_themkhacho.TabIndex = 11;
+            this.btn_themkhacho.Text = "Thêm khách";
+            this.btn_themkhacho.UseVisualStyleBackColor = true;
+            this.btn_themkhacho.Click += new System.EventHandler(this.btn_themkhacho_Click);
             // 
             // panel3
             // 
@@ -316,7 +370,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(384, 37);
+            this.panel3.Size = new System.Drawing.Size(370, 37);
             this.panel3.TabIndex = 0;
             // 
             // label2
@@ -332,12 +386,12 @@
             // pan_chitietdatphonglist
             // 
             this.pan_chitietdatphonglist.Controls.Add(this.panel5);
-            this.pan_chitietdatphonglist.Controls.Add(this.listView1);
+            this.pan_chitietdatphonglist.Controls.Add(this.lvChiTietDatPhong);
             this.pan_chitietdatphonglist.Controls.Add(this.panel2);
             this.pan_chitietdatphonglist.Dock = System.Windows.Forms.DockStyle.Left;
             this.pan_chitietdatphonglist.Location = new System.Drawing.Point(0, 0);
             this.pan_chitietdatphonglist.Name = "pan_chitietdatphonglist";
-            this.pan_chitietdatphonglist.Size = new System.Drawing.Size(410, 293);
+            this.pan_chitietdatphonglist.Size = new System.Drawing.Size(410, 322);
             this.pan_chitietdatphonglist.TabIndex = 1;
             // 
             // panel5
@@ -346,56 +400,86 @@
             this.panel5.Controls.Add(this.btn_suachitietdatphong);
             this.panel5.Controls.Add(this.btn_themchitietdatphong);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 255);
+            this.panel5.Location = new System.Drawing.Point(0, 284);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(410, 38);
             this.panel5.TabIndex = 2;
             // 
             // btn_xoachitietdatphong
             // 
+            this.btn_xoachitietdatphong.Enabled = false;
             this.btn_xoachitietdatphong.Location = new System.Drawing.Point(278, 9);
             this.btn_xoachitietdatphong.Name = "btn_xoachitietdatphong";
             this.btn_xoachitietdatphong.Size = new System.Drawing.Size(94, 23);
-            this.btn_xoachitietdatphong.TabIndex = 2;
+            this.btn_xoachitietdatphong.TabIndex = 10;
             this.btn_xoachitietdatphong.Text = "Xóa nội dung";
             this.btn_xoachitietdatphong.UseVisualStyleBackColor = true;
+            this.btn_xoachitietdatphong.Click += new System.EventHandler(this.btn_xoachitietdatphong_Click);
             // 
             // btn_suachitietdatphong
             // 
+            this.btn_suachitietdatphong.Enabled = false;
             this.btn_suachitietdatphong.Location = new System.Drawing.Point(151, 9);
             this.btn_suachitietdatphong.Name = "btn_suachitietdatphong";
             this.btn_suachitietdatphong.Size = new System.Drawing.Size(92, 23);
-            this.btn_suachitietdatphong.TabIndex = 1;
+            this.btn_suachitietdatphong.TabIndex = 9;
             this.btn_suachitietdatphong.Text = "Sửa nội dung";
             this.btn_suachitietdatphong.UseVisualStyleBackColor = true;
+            this.btn_suachitietdatphong.Visible = false;
             // 
             // btn_themchitietdatphong
             // 
+            this.btn_themchitietdatphong.Enabled = false;
             this.btn_themchitietdatphong.Location = new System.Drawing.Point(25, 9);
             this.btn_themchitietdatphong.Name = "btn_themchitietdatphong";
             this.btn_themchitietdatphong.Size = new System.Drawing.Size(93, 23);
-            this.btn_themchitietdatphong.TabIndex = 0;
+            this.btn_themchitietdatphong.TabIndex = 8;
             this.btn_themchitietdatphong.Text = "Thêm nội dung";
             this.btn_themchitietdatphong.UseVisualStyleBackColor = true;
+            this.btn_themchitietdatphong.Click += new System.EventHandler(this.btn_themchitietdatphong_Click);
             // 
-            // listView1
+            // lvChiTietDatPhong
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 37);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(410, 256);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvChiTietDatPhong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ngaynhanphong,
+            this.ngaytraphong,
+            this.sophong,
+            this.idchitietdatphong,
+            this.idphong});
+            this.lvChiTietDatPhong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvChiTietDatPhong.FullRowSelect = true;
+            this.lvChiTietDatPhong.GridLines = true;
+            this.lvChiTietDatPhong.HideSelection = false;
+            this.lvChiTietDatPhong.Location = new System.Drawing.Point(0, 37);
+            this.lvChiTietDatPhong.Name = "lvChiTietDatPhong";
+            this.lvChiTietDatPhong.Size = new System.Drawing.Size(410, 285);
+            this.lvChiTietDatPhong.TabIndex = 1;
+            this.lvChiTietDatPhong.TabStop = false;
+            this.lvChiTietDatPhong.UseCompatibleStateImageBehavior = false;
+            this.lvChiTietDatPhong.View = System.Windows.Forms.View.Details;
+            this.lvChiTietDatPhong.SelectedIndexChanged += new System.EventHandler(this.lvChiTietDatPhong_SelectedIndexChanged);
+            // 
+            // ngaynhanphong
+            // 
+            this.ngaynhanphong.Text = "Ngày nhận phòng";
+            this.ngaynhanphong.Width = 90;
+            // 
+            // ngaytraphong
+            // 
+            this.ngaytraphong.Text = "Ngày trả phòng";
+            this.ngaytraphong.Width = 90;
+            // 
+            // sophong
+            // 
+            this.sophong.Text = "Số phòng";
+            // 
+            // idchitietdatphong
+            // 
+            this.idchitietdatphong.Text = "idchitietdatphong";
+            // 
+            // idphong
+            // 
+            this.idphong.Text = "idphong";
             // 
             // panel2
             // 
@@ -418,58 +502,112 @@
             // 
             // pan_dichvu
             // 
+            this.pan_dichvu.Controls.Add(this.lvSuDungDichVu);
             this.pan_dichvu.Controls.Add(this.panel7);
             this.pan_dichvu.Controls.Add(this.panel4);
             this.pan_dichvu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pan_dichvu.Location = new System.Drawing.Point(794, 0);
+            this.pan_dichvu.Location = new System.Drawing.Point(780, 0);
             this.pan_dichvu.Name = "pan_dichvu";
-            this.pan_dichvu.Size = new System.Drawing.Size(339, 293);
+            this.pan_dichvu.Size = new System.Drawing.Size(390, 322);
             this.pan_dichvu.TabIndex = 0;
+            // 
+            // lvSuDungDichVu
+            // 
+            this.lvSuDungDichVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.sddv_ngaysudung,
+            this.sddd_tendichvu,
+            this.sddv_soluong,
+            this.sddv_dongia,
+            this.sddv_thanhtien,
+            this.sddv_idsudungdichvu});
+            this.lvSuDungDichVu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvSuDungDichVu.FullRowSelect = true;
+            this.lvSuDungDichVu.GridLines = true;
+            this.lvSuDungDichVu.HideSelection = false;
+            this.lvSuDungDichVu.Location = new System.Drawing.Point(0, 37);
+            this.lvSuDungDichVu.Name = "lvSuDungDichVu";
+            this.lvSuDungDichVu.Size = new System.Drawing.Size(390, 247);
+            this.lvSuDungDichVu.TabIndex = 2;
+            this.lvSuDungDichVu.TabStop = false;
+            this.lvSuDungDichVu.UseCompatibleStateImageBehavior = false;
+            this.lvSuDungDichVu.View = System.Windows.Forms.View.Details;
+            this.lvSuDungDichVu.SelectedIndexChanged += new System.EventHandler(this.lvSuDungDichVu_SelectedIndexChanged);
+            // 
+            // sddv_ngaysudung
+            // 
+            this.sddv_ngaysudung.Text = "Ngày sử dụng";
+            // 
+            // sddd_tendichvu
+            // 
+            this.sddd_tendichvu.Text = "Tên dịch vụ";
+            // 
+            // sddv_soluong
+            // 
+            this.sddv_soluong.Text = "Số lượng";
+            // 
+            // sddv_dongia
+            // 
+            this.sddv_dongia.Text = "Đơn giá";
+            // 
+            // sddv_thanhtien
+            // 
+            this.sddv_thanhtien.Text = "Thành tiền";
+            // 
+            // sddv_idsudungdichvu
+            // 
+            this.sddv_idsudungdichvu.Text = "idsudungdichvu";
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button8);
-            this.panel7.Controls.Add(this.button7);
-            this.panel7.Controls.Add(this.textBox1);
-            this.panel7.Controls.Add(this.comboBox1);
+            this.panel7.Controls.Add(this.btn_xoasudungdichvu);
+            this.panel7.Controls.Add(this.btn_themsudungdichvu);
+            this.panel7.Controls.Add(this.txt_soluongsudungdichvu);
+            this.panel7.Controls.Add(this.cbb_themsudungdichvu);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 255);
+            this.panel7.Location = new System.Drawing.Point(0, 284);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(339, 38);
+            this.panel7.Size = new System.Drawing.Size(390, 38);
             this.panel7.TabIndex = 1;
             // 
-            // button8
+            // btn_xoasudungdichvu
             // 
-            this.button8.Location = new System.Drawing.Point(288, 9);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(46, 23);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "-";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_xoasudungdichvu.Enabled = false;
+            this.btn_xoasudungdichvu.Location = new System.Drawing.Point(288, 9);
+            this.btn_xoasudungdichvu.Name = "btn_xoasudungdichvu";
+            this.btn_xoasudungdichvu.Size = new System.Drawing.Size(46, 23);
+            this.btn_xoasudungdichvu.TabIndex = 2;
+            this.btn_xoasudungdichvu.Text = "-";
+            this.btn_xoasudungdichvu.UseVisualStyleBackColor = true;
+            this.btn_xoasudungdichvu.Click += new System.EventHandler(this.btn_xoasudungdichvu_Click);
             // 
-            // button7
+            // btn_themsudungdichvu
             // 
-            this.button7.Location = new System.Drawing.Point(237, 9);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(46, 23);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "+";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_themsudungdichvu.Enabled = false;
+            this.btn_themsudungdichvu.Location = new System.Drawing.Point(237, 9);
+            this.btn_themsudungdichvu.Name = "btn_themsudungdichvu";
+            this.btn_themsudungdichvu.Size = new System.Drawing.Size(46, 23);
+            this.btn_themsudungdichvu.TabIndex = 2;
+            this.btn_themsudungdichvu.Text = "+";
+            this.btn_themsudungdichvu.UseVisualStyleBackColor = true;
+            this.btn_themsudungdichvu.Click += new System.EventHandler(this.btn_themsudungdichvu_Click);
             // 
-            // textBox1
+            // txt_soluongsudungdichvu
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(58, 20);
-            this.textBox1.TabIndex = 1;
+            this.txt_soluongsudungdichvu.Enabled = false;
+            this.txt_soluongsudungdichvu.Location = new System.Drawing.Point(173, 11);
+            this.txt_soluongsudungdichvu.Name = "txt_soluongsudungdichvu";
+            this.txt_soluongsudungdichvu.Size = new System.Drawing.Size(58, 20);
+            this.txt_soluongsudungdichvu.TabIndex = 1;
             // 
-            // comboBox1
+            // cbb_themsudungdichvu
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 11);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbb_themsudungdichvu.Enabled = false;
+            this.cbb_themsudungdichvu.FormattingEnabled = true;
+            this.cbb_themsudungdichvu.Location = new System.Drawing.Point(6, 11);
+            this.cbb_themsudungdichvu.Name = "cbb_themsudungdichvu";
+            this.cbb_themsudungdichvu.Size = new System.Drawing.Size(161, 21);
+            this.cbb_themsudungdichvu.TabIndex = 0;
+            this.cbb_themsudungdichvu.SelectedIndexChanged += new System.EventHandler(this.cbb_themsudungdichvu_SelectedIndexChanged);
             // 
             // panel4
             // 
@@ -477,7 +615,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(339, 37);
+            this.panel4.Size = new System.Drawing.Size(390, 37);
             this.panel4.TabIndex = 0;
             // 
             // label3
@@ -497,7 +635,7 @@
             this.pan_dondatphong.Dock = System.Windows.Forms.DockStyle.Top;
             this.pan_dondatphong.Location = new System.Drawing.Point(3, 3);
             this.pan_dondatphong.Name = "pan_dondatphong";
-            this.pan_dondatphong.Size = new System.Drawing.Size(1133, 230);
+            this.pan_dondatphong.Size = new System.Drawing.Size(1170, 297);
             this.pan_dondatphong.TabIndex = 0;
             // 
             // lvDonDatPhong
@@ -510,6 +648,7 @@
             this.sdtkhach,
             this.emailkhach,
             this.tennhanvien,
+            this.ghichu,
             this.idkhach,
             this.idnhanvien});
             this.lvDonDatPhong.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -518,8 +657,9 @@
             this.lvDonDatPhong.HideSelection = false;
             this.lvDonDatPhong.Location = new System.Drawing.Point(0, 0);
             this.lvDonDatPhong.Name = "lvDonDatPhong";
-            this.lvDonDatPhong.Size = new System.Drawing.Size(836, 230);
+            this.lvDonDatPhong.Size = new System.Drawing.Size(873, 297);
             this.lvDonDatPhong.TabIndex = 1;
+            this.lvDonDatPhong.TabStop = false;
             this.lvDonDatPhong.UseCompatibleStateImageBehavior = false;
             this.lvDonDatPhong.View = System.Windows.Forms.View.Details;
             this.lvDonDatPhong.SelectedIndexChanged += new System.EventHandler(this.lvDonDatPhong_SelectedIndexChanged);
@@ -531,7 +671,7 @@
             // ngaydat
             // 
             this.ngaydat.Text = "Ngày đặt";
-            this.ngaydat.Width = 120;
+            this.ngaydat.Width = 90;
             // 
             // tenkhachhang
             // 
@@ -541,57 +681,98 @@
             // cmndkhach
             // 
             this.cmndkhach.Text = "Số CCCD";
-            this.cmndkhach.Width = 120;
             // 
             // sdtkhach
             // 
             this.sdtkhach.Text = "Số điện thoại";
             this.sdtkhach.Width = 90;
             // 
+            // emailkhach
+            // 
+            this.emailkhach.Text = "Email";
+            this.emailkhach.Width = 90;
+            // 
+            // tennhanvien
+            // 
+            this.tennhanvien.Text = "Nhân viên tạo đơn";
+            this.tennhanvien.Width = 150;
+            // 
+            // ghichu
+            // 
+            this.ghichu.Text = "Ghi chú";
+            // 
+            // idkhach
+            // 
+            this.idkhach.Text = "IDKhach";
+            // 
+            // idnhanvien
+            // 
+            this.idnhanvien.Text = "IDNV";
+            // 
             // pan_dondatphong_ctrl
             // 
-            this.pan_dondatphong_ctrl.Controls.Add(this.txt_idkhachphong);
-            this.pan_dondatphong_ctrl.Controls.Add(this.wlbl_khachdat);
+            this.pan_dondatphong_ctrl.Controls.Add(this.cbb_nhanviendatphong);
+            this.pan_dondatphong_ctrl.Controls.Add(this.txt_tenkhachdatphong);
+            this.pan_dondatphong_ctrl.Controls.Add(this.txt_idkhachdatphong);
+            this.pan_dondatphong_ctrl.Controls.Add(this.wlbl_khachdatphong);
             this.pan_dondatphong_ctrl.Controls.Add(this.wlbl_ngaydat);
             this.pan_dondatphong_ctrl.Controls.Add(this.txt_ghichu);
-            this.pan_dondatphong_ctrl.Controls.Add(this.btn_khachdat);
+            this.pan_dondatphong_ctrl.Controls.Add(this.btn_suadondatphong);
+            this.pan_dondatphong_ctrl.Controls.Add(this.btn_chonkhachdat);
+            this.pan_dondatphong_ctrl.Controls.Add(this.btn_themdondatphong);
             this.pan_dondatphong_ctrl.Controls.Add(this.txt_ngaydat);
+            this.pan_dondatphong_ctrl.Controls.Add(this.btn_xoadondatphong);
+            this.pan_dondatphong_ctrl.Controls.Add(this.label10);
             this.pan_dondatphong_ctrl.Controls.Add(this.lbl_ghichu);
             this.pan_dondatphong_ctrl.Controls.Add(this.lbl_khachdat);
             this.pan_dondatphong_ctrl.Controls.Add(this.lbl_ngaydat);
-            this.pan_dondatphong_ctrl.Controls.Add(this.btn_xoadondatphong);
-            this.pan_dondatphong_ctrl.Controls.Add(this.btn_suadondatphong);
-            this.pan_dondatphong_ctrl.Controls.Add(this.btn_themdondatphong);
             this.pan_dondatphong_ctrl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pan_dondatphong_ctrl.Location = new System.Drawing.Point(836, 0);
+            this.pan_dondatphong_ctrl.Location = new System.Drawing.Point(873, 0);
             this.pan_dondatphong_ctrl.Name = "pan_dondatphong_ctrl";
-            this.pan_dondatphong_ctrl.Size = new System.Drawing.Size(297, 230);
+            this.pan_dondatphong_ctrl.Size = new System.Drawing.Size(297, 297);
             this.pan_dondatphong_ctrl.TabIndex = 0;
             // 
-            // txt_idkhachphong
+            // cbb_nhanviendatphong
             // 
-            this.txt_idkhachphong.Location = new System.Drawing.Point(9, 115);
-            this.txt_idkhachphong.Name = "txt_idkhachphong";
-            this.txt_idkhachphong.Size = new System.Drawing.Size(71, 20);
-            this.txt_idkhachphong.TabIndex = 11;
-            this.txt_idkhachphong.Visible = false;
+            this.cbb_nhanviendatphong.FormattingEnabled = true;
+            this.cbb_nhanviendatphong.Location = new System.Drawing.Point(88, 219);
+            this.cbb_nhanviendatphong.Name = "cbb_nhanviendatphong";
+            this.cbb_nhanviendatphong.Size = new System.Drawing.Size(200, 21);
+            this.cbb_nhanviendatphong.TabIndex = 4;
             // 
-            // wlbl_khachdat
+            // txt_tenkhachdatphong
             // 
-            this.wlbl_khachdat.AutoSize = true;
-            this.wlbl_khachdat.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_khachdat.Location = new System.Drawing.Point(86, 115);
-            this.wlbl_khachdat.Name = "wlbl_khachdat";
-            this.wlbl_khachdat.Size = new System.Drawing.Size(157, 13);
-            this.wlbl_khachdat.TabIndex = 10;
-            this.wlbl_khachdat.Text = "Vui lòng chọn khách đặt phòng";
-            this.wlbl_khachdat.Visible = false;
+            this.txt_tenkhachdatphong.Location = new System.Drawing.Point(88, 60);
+            this.txt_tenkhachdatphong.Name = "txt_tenkhachdatphong";
+            this.txt_tenkhachdatphong.ReadOnly = true;
+            this.txt_tenkhachdatphong.Size = new System.Drawing.Size(200, 20);
+            this.txt_tenkhachdatphong.TabIndex = 12;
+            // 
+            // txt_idkhachdatphong
+            // 
+            this.txt_idkhachdatphong.Location = new System.Drawing.Point(11, 90);
+            this.txt_idkhachdatphong.Name = "txt_idkhachdatphong";
+            this.txt_idkhachdatphong.ReadOnly = true;
+            this.txt_idkhachdatphong.Size = new System.Drawing.Size(41, 20);
+            this.txt_idkhachdatphong.TabIndex = 11;
+            this.txt_idkhachdatphong.Visible = false;
+            // 
+            // wlbl_khachdatphong
+            // 
+            this.wlbl_khachdatphong.AutoSize = true;
+            this.wlbl_khachdatphong.ForeColor = System.Drawing.Color.Red;
+            this.wlbl_khachdatphong.Location = new System.Drawing.Point(88, 113);
+            this.wlbl_khachdatphong.Name = "wlbl_khachdatphong";
+            this.wlbl_khachdatphong.Size = new System.Drawing.Size(157, 13);
+            this.wlbl_khachdatphong.TabIndex = 10;
+            this.wlbl_khachdatphong.Text = "Vui lòng chọn khách đặt phòng";
+            this.wlbl_khachdatphong.Visible = false;
             // 
             // wlbl_ngaydat
             // 
             this.wlbl_ngaydat.AutoSize = true;
             this.wlbl_ngaydat.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_ngaydat.Location = new System.Drawing.Point(83, 61);
+            this.wlbl_ngaydat.Location = new System.Drawing.Point(85, 30);
             this.wlbl_ngaydat.Name = "wlbl_ngaydat";
             this.wlbl_ngaydat.Size = new System.Drawing.Size(150, 13);
             this.wlbl_ngaydat.TabIndex = 9;
@@ -600,33 +781,74 @@
             // 
             // txt_ghichu
             // 
-            this.txt_ghichu.Location = new System.Drawing.Point(86, 149);
+            this.txt_ghichu.Location = new System.Drawing.Point(88, 142);
             this.txt_ghichu.Name = "txt_ghichu";
-            this.txt_ghichu.Size = new System.Drawing.Size(206, 68);
-            this.txt_ghichu.TabIndex = 8;
+            this.txt_ghichu.Size = new System.Drawing.Size(200, 68);
+            this.txt_ghichu.TabIndex = 3;
             this.txt_ghichu.Text = "";
             // 
-            // btn_khachdat
+            // btn_suadondatphong
             // 
-            this.btn_khachdat.Location = new System.Drawing.Point(86, 89);
-            this.btn_khachdat.Name = "btn_khachdat";
-            this.btn_khachdat.Size = new System.Drawing.Size(200, 23);
-            this.btn_khachdat.TabIndex = 7;
-            this.btn_khachdat.Text = "Chọn khách đặt";
-            this.btn_khachdat.UseVisualStyleBackColor = true;
-            this.btn_khachdat.Click += new System.EventHandler(this.btn_khachdat_Click);
+            this.btn_suadondatphong.Enabled = false;
+            this.btn_suadondatphong.Location = new System.Drawing.Point(118, 260);
+            this.btn_suadondatphong.Name = "btn_suadondatphong";
+            this.btn_suadondatphong.Size = new System.Drawing.Size(75, 31);
+            this.btn_suadondatphong.TabIndex = 6;
+            this.btn_suadondatphong.Text = "Sửa đơn";
+            this.btn_suadondatphong.UseVisualStyleBackColor = true;
+            this.btn_suadondatphong.Click += new System.EventHandler(this.btn_suadondatphong_Click);
+            // 
+            // btn_chonkhachdat
+            // 
+            this.btn_chonkhachdat.Location = new System.Drawing.Point(88, 87);
+            this.btn_chonkhachdat.Name = "btn_chonkhachdat";
+            this.btn_chonkhachdat.Size = new System.Drawing.Size(200, 23);
+            this.btn_chonkhachdat.TabIndex = 2;
+            this.btn_chonkhachdat.Text = "Chọn khách đặt";
+            this.btn_chonkhachdat.UseVisualStyleBackColor = true;
+            this.btn_chonkhachdat.Click += new System.EventHandler(this.btn_khachdat_Click);
+            // 
+            // btn_themdondatphong
+            // 
+            this.btn_themdondatphong.Location = new System.Drawing.Point(11, 260);
+            this.btn_themdondatphong.Name = "btn_themdondatphong";
+            this.btn_themdondatphong.Size = new System.Drawing.Size(75, 31);
+            this.btn_themdondatphong.TabIndex = 5;
+            this.btn_themdondatphong.Text = "Thêm đơn";
+            this.btn_themdondatphong.UseVisualStyleBackColor = true;
+            this.btn_themdondatphong.Click += new System.EventHandler(this.btn_themdondatphong_Click);
             // 
             // txt_ngaydat
             // 
-            this.txt_ngaydat.Location = new System.Drawing.Point(86, 38);
+            this.txt_ngaydat.Location = new System.Drawing.Point(88, 7);
             this.txt_ngaydat.Name = "txt_ngaydat";
             this.txt_ngaydat.Size = new System.Drawing.Size(200, 20);
-            this.txt_ngaydat.TabIndex = 6;
+            this.txt_ngaydat.TabIndex = 1;
+            // 
+            // btn_xoadondatphong
+            // 
+            this.btn_xoadondatphong.Enabled = false;
+            this.btn_xoadondatphong.Location = new System.Drawing.Point(213, 260);
+            this.btn_xoadondatphong.Name = "btn_xoadondatphong";
+            this.btn_xoadondatphong.Size = new System.Drawing.Size(75, 31);
+            this.btn_xoadondatphong.TabIndex = 7;
+            this.btn_xoadondatphong.Text = "Xóa đơn";
+            this.btn_xoadondatphong.UseVisualStyleBackColor = true;
+            this.btn_xoadondatphong.Click += new System.EventHandler(this.btn_xoadondatphong_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 222);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Nhân viên";
             // 
             // lbl_ghichu
             // 
             this.lbl_ghichu.AutoSize = true;
-            this.lbl_ghichu.Location = new System.Drawing.Point(6, 149);
+            this.lbl_ghichu.Location = new System.Drawing.Point(8, 142);
             this.lbl_ghichu.Name = "lbl_ghichu";
             this.lbl_ghichu.Size = new System.Drawing.Size(44, 13);
             this.lbl_ghichu.TabIndex = 5;
@@ -635,7 +857,7 @@
             // lbl_khachdat
             // 
             this.lbl_khachdat.AutoSize = true;
-            this.lbl_khachdat.Location = new System.Drawing.Point(6, 94);
+            this.lbl_khachdat.Location = new System.Drawing.Point(8, 63);
             this.lbl_khachdat.Name = "lbl_khachdat";
             this.lbl_khachdat.Size = new System.Drawing.Size(57, 13);
             this.lbl_khachdat.TabIndex = 4;
@@ -644,38 +866,11 @@
             // lbl_ngaydat
             // 
             this.lbl_ngaydat.AutoSize = true;
-            this.lbl_ngaydat.Location = new System.Drawing.Point(6, 42);
+            this.lbl_ngaydat.Location = new System.Drawing.Point(8, 11);
             this.lbl_ngaydat.Name = "lbl_ngaydat";
             this.lbl_ngaydat.Size = new System.Drawing.Size(51, 13);
             this.lbl_ngaydat.TabIndex = 3;
             this.lbl_ngaydat.Text = "Ngày đặt";
-            // 
-            // btn_xoadondatphong
-            // 
-            this.btn_xoadondatphong.Location = new System.Drawing.Point(211, 3);
-            this.btn_xoadondatphong.Name = "btn_xoadondatphong";
-            this.btn_xoadondatphong.Size = new System.Drawing.Size(75, 23);
-            this.btn_xoadondatphong.TabIndex = 2;
-            this.btn_xoadondatphong.Text = "Xóa đơn";
-            this.btn_xoadondatphong.UseVisualStyleBackColor = true;
-            // 
-            // btn_suadondatphong
-            // 
-            this.btn_suadondatphong.Location = new System.Drawing.Point(116, 3);
-            this.btn_suadondatphong.Name = "btn_suadondatphong";
-            this.btn_suadondatphong.Size = new System.Drawing.Size(75, 23);
-            this.btn_suadondatphong.TabIndex = 1;
-            this.btn_suadondatphong.Text = "Sửa đơn";
-            this.btn_suadondatphong.UseVisualStyleBackColor = true;
-            // 
-            // btn_themdondatphong
-            // 
-            this.btn_themdondatphong.Location = new System.Drawing.Point(9, 3);
-            this.btn_themdondatphong.Name = "btn_themdondatphong";
-            this.btn_themdondatphong.Size = new System.Drawing.Size(75, 23);
-            this.btn_themdondatphong.TabIndex = 0;
-            this.btn_themdondatphong.Text = "Thêm đơn";
-            this.btn_themdondatphong.UseVisualStyleBackColor = true;
             // 
             // tab_khachhang
             // 
@@ -684,7 +879,7 @@
             this.tab_khachhang.Location = new System.Drawing.Point(4, 22);
             this.tab_khachhang.Name = "tab_khachhang";
             this.tab_khachhang.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_khachhang.Size = new System.Drawing.Size(1139, 529);
+            this.tab_khachhang.Size = new System.Drawing.Size(1176, 625);
             this.tab_khachhang.TabIndex = 1;
             this.tab_khachhang.Text = "Cơ sở dữ liệu khách hàng";
             this.tab_khachhang.UseVisualStyleBackColor = true;
@@ -706,7 +901,7 @@
             this.lvKhachHang.Location = new System.Drawing.Point(3, 3);
             this.lvKhachHang.MultiSelect = false;
             this.lvKhachHang.Name = "lvKhachHang";
-            this.lvKhachHang.Size = new System.Drawing.Size(812, 523);
+            this.lvKhachHang.Size = new System.Drawing.Size(849, 619);
             this.lvKhachHang.TabIndex = 1;
             this.lvKhachHang.UseCompatibleStateImageBehavior = false;
             this.lvKhachHang.View = System.Windows.Forms.View.Details;
@@ -771,9 +966,9 @@
             this.panel9.Controls.Add(this.btn_suakhachhang);
             this.panel9.Controls.Add(this.btn_themkhachhang);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(815, 3);
+            this.panel9.Location = new System.Drawing.Point(852, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(321, 523);
+            this.panel9.Size = new System.Drawing.Size(321, 619);
             this.panel9.TabIndex = 0;
             // 
             // txt_idkhachhang
@@ -782,6 +977,7 @@
             this.txt_idkhachhang.Name = "txt_idkhachhang";
             this.txt_idkhachhang.Size = new System.Drawing.Size(100, 20);
             this.txt_idkhachhang.TabIndex = 6;
+            this.txt_idkhachhang.Visible = false;
             // 
             // ckb_suakhachhang
             // 
@@ -791,6 +987,7 @@
             this.ckb_suakhachhang.Size = new System.Drawing.Size(15, 14);
             this.ckb_suakhachhang.TabIndex = 5;
             this.ckb_suakhachhang.UseVisualStyleBackColor = true;
+            this.ckb_suakhachhang.Visible = false;
             // 
             // panel10
             // 
@@ -1008,17 +1205,17 @@
             this.btn_themkhachhang.UseVisualStyleBackColor = true;
             this.btn_themkhachhang.Click += new System.EventHandler(this.btn_themkhachhang_Click);
             // 
-            // tabPage1
+            // tabDichvu
             // 
-            this.tabPage1.Controls.Add(this.lvDichVu);
-            this.tabPage1.Controls.Add(this.panel8);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1139, 529);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Danh mục dịch vụ";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabDichvu.Controls.Add(this.lvDichVu);
+            this.tabDichvu.Controls.Add(this.panel8);
+            this.tabDichvu.Location = new System.Drawing.Point(4, 22);
+            this.tabDichvu.Name = "tabDichvu";
+            this.tabDichvu.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDichvu.Size = new System.Drawing.Size(1176, 625);
+            this.tabDichvu.TabIndex = 2;
+            this.tabDichvu.Text = "Danh mục dịch vụ";
+            this.tabDichvu.UseVisualStyleBackColor = true;
             // 
             // lvDichVu
             // 
@@ -1033,7 +1230,7 @@
             this.lvDichVu.HideSelection = false;
             this.lvDichVu.Location = new System.Drawing.Point(3, 3);
             this.lvDichVu.Name = "lvDichVu";
-            this.lvDichVu.Size = new System.Drawing.Size(859, 523);
+            this.lvDichVu.Size = new System.Drawing.Size(896, 619);
             this.lvDichVu.TabIndex = 1;
             this.lvDichVu.UseCompatibleStateImageBehavior = false;
             this.lvDichVu.View = System.Windows.Forms.View.Details;
@@ -1075,15 +1272,15 @@
             this.panel8.Controls.Add(this.btn_suadichvu);
             this.panel8.Controls.Add(this.btn_themdichvu);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(862, 3);
+            this.panel8.Location = new System.Drawing.Point(899, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(274, 523);
+            this.panel8.Size = new System.Drawing.Size(274, 619);
             this.panel8.TabIndex = 0;
             // 
             // txt_iddichvu
             // 
             this.txt_iddichvu.Enabled = false;
-            this.txt_iddichvu.Location = new System.Drawing.Point(129, 34);
+            this.txt_iddichvu.Location = new System.Drawing.Point(130, 3);
             this.txt_iddichvu.Name = "txt_iddichvu";
             this.txt_iddichvu.Size = new System.Drawing.Size(100, 20);
             this.txt_iddichvu.TabIndex = 4;
@@ -1093,7 +1290,7 @@
             // 
             this.ckb_suadichvu.AutoSize = true;
             this.ckb_suadichvu.Enabled = false;
-            this.ckb_suadichvu.Location = new System.Drawing.Point(97, 34);
+            this.ckb_suadichvu.Location = new System.Drawing.Point(98, 3);
             this.ckb_suadichvu.Name = "ckb_suadichvu";
             this.ckb_suadichvu.Size = new System.Drawing.Size(15, 14);
             this.ckb_suadichvu.TabIndex = 3;
@@ -1104,7 +1301,7 @@
             // 
             this.wlbl_dongia.AutoSize = true;
             this.wlbl_dongia.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_dongia.Location = new System.Drawing.Point(155, 252);
+            this.wlbl_dongia.Location = new System.Drawing.Point(156, 221);
             this.wlbl_dongia.Name = "wlbl_dongia";
             this.wlbl_dongia.Size = new System.Drawing.Size(111, 13);
             this.wlbl_dongia.TabIndex = 2;
@@ -1114,7 +1311,7 @@
             // lbl_dongia
             // 
             this.lbl_dongia.AutoSize = true;
-            this.lbl_dongia.Location = new System.Drawing.Point(7, 213);
+            this.lbl_dongia.Location = new System.Drawing.Point(8, 182);
             this.lbl_dongia.Name = "lbl_dongia";
             this.lbl_dongia.Size = new System.Drawing.Size(44, 13);
             this.lbl_dongia.TabIndex = 2;
@@ -1124,7 +1321,7 @@
             // 
             this.wlbl_donvitinh.AutoSize = true;
             this.wlbl_donvitinh.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_donvitinh.Location = new System.Drawing.Point(139, 172);
+            this.wlbl_donvitinh.Location = new System.Drawing.Point(140, 141);
             this.wlbl_donvitinh.Name = "wlbl_donvitinh";
             this.wlbl_donvitinh.Size = new System.Drawing.Size(127, 13);
             this.wlbl_donvitinh.TabIndex = 2;
@@ -1134,7 +1331,7 @@
             // lbl_donvitinh
             // 
             this.lbl_donvitinh.AutoSize = true;
-            this.lbl_donvitinh.Location = new System.Drawing.Point(7, 133);
+            this.lbl_donvitinh.Location = new System.Drawing.Point(8, 102);
             this.lbl_donvitinh.Name = "lbl_donvitinh";
             this.lbl_donvitinh.Size = new System.Drawing.Size(60, 13);
             this.lbl_donvitinh.TabIndex = 2;
@@ -1144,7 +1341,7 @@
             // 
             this.wlbl_tendichvu.AutoSize = true;
             this.wlbl_tendichvu.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_tendichvu.Location = new System.Drawing.Point(138, 86);
+            this.wlbl_tendichvu.Location = new System.Drawing.Point(139, 55);
             this.wlbl_tendichvu.Name = "wlbl_tendichvu";
             this.wlbl_tendichvu.Size = new System.Drawing.Size(128, 13);
             this.wlbl_tendichvu.TabIndex = 2;
@@ -1154,7 +1351,7 @@
             // lbl_tendichvu
             // 
             this.lbl_tendichvu.AutoSize = true;
-            this.lbl_tendichvu.Location = new System.Drawing.Point(7, 47);
+            this.lbl_tendichvu.Location = new System.Drawing.Point(8, 16);
             this.lbl_tendichvu.Name = "lbl_tendichvu";
             this.lbl_tendichvu.Size = new System.Drawing.Size(64, 13);
             this.lbl_tendichvu.TabIndex = 2;
@@ -1162,28 +1359,28 @@
             // 
             // txt_dongia
             // 
-            this.txt_dongia.Location = new System.Drawing.Point(7, 229);
+            this.txt_dongia.Location = new System.Drawing.Point(8, 198);
             this.txt_dongia.Name = "txt_dongia";
             this.txt_dongia.Size = new System.Drawing.Size(259, 20);
             this.txt_dongia.TabIndex = 1;
             // 
             // txt_donvitinh
             // 
-            this.txt_donvitinh.Location = new System.Drawing.Point(7, 149);
+            this.txt_donvitinh.Location = new System.Drawing.Point(8, 118);
             this.txt_donvitinh.Name = "txt_donvitinh";
             this.txt_donvitinh.Size = new System.Drawing.Size(259, 20);
             this.txt_donvitinh.TabIndex = 1;
             // 
             // txt_tendichvu
             // 
-            this.txt_tendichvu.Location = new System.Drawing.Point(7, 63);
+            this.txt_tendichvu.Location = new System.Drawing.Point(8, 32);
             this.txt_tendichvu.Name = "txt_tendichvu";
             this.txt_tendichvu.Size = new System.Drawing.Size(259, 20);
             this.txt_tendichvu.TabIndex = 1;
             // 
             // btn_xoadichvu
             // 
-            this.btn_xoadichvu.Location = new System.Drawing.Point(191, 4);
+            this.btn_xoadichvu.Location = new System.Drawing.Point(192, 258);
             this.btn_xoadichvu.Name = "btn_xoadichvu";
             this.btn_xoadichvu.Size = new System.Drawing.Size(75, 23);
             this.btn_xoadichvu.TabIndex = 0;
@@ -1193,7 +1390,7 @@
             // 
             // btn_suadichvu
             // 
-            this.btn_suadichvu.Location = new System.Drawing.Point(97, 4);
+            this.btn_suadichvu.Location = new System.Drawing.Point(98, 258);
             this.btn_suadichvu.Name = "btn_suadichvu";
             this.btn_suadichvu.Size = new System.Drawing.Size(75, 23);
             this.btn_suadichvu.TabIndex = 0;
@@ -1203,7 +1400,7 @@
             // 
             // btn_themdichvu
             // 
-            this.btn_themdichvu.Location = new System.Drawing.Point(7, 4);
+            this.btn_themdichvu.Location = new System.Drawing.Point(8, 258);
             this.btn_themdichvu.Name = "btn_themdichvu";
             this.btn_themdichvu.Size = new System.Drawing.Size(75, 23);
             this.btn_themdichvu.TabIndex = 0;
@@ -1211,33 +1408,17 @@
             this.btn_themdichvu.UseVisualStyleBackColor = true;
             this.btn_themdichvu.Click += new System.EventHandler(this.btn_themdichvu_Click);
             // 
-            // emailkhach
-            // 
-            this.emailkhach.Text = "Email";
-            this.emailkhach.Width = 150;
-            // 
-            // tennhanvien
-            // 
-            this.tennhanvien.Text = "Nhân viên tạo đơn";
-            this.tennhanvien.Width = 150;
-            // 
-            // idkhach
-            // 
-            this.idkhach.Text = "IDKhach";
-            // 
-            // idnhanvien
-            // 
-            this.idnhanvien.Text = "IDNV";
-            // 
             // frmQuanLyDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 605);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1184, 701);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Name = "frmQuanLyDatPhong";
-            this.Text = "frmQuanLyDatPhong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý đặt phòng";
             this.Load += new System.EventHandler(this.frmQuanLyDatPhong_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1265,7 +1446,7 @@
             this.panel9.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.tabDichvu.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.ResumeLayout(false);
@@ -1294,10 +1475,10 @@
         private System.Windows.Forms.Label lbl_ghichu;
         private System.Windows.Forms.Label lbl_khachdat;
         private System.Windows.Forms.Label lbl_ngaydat;
-        private System.Windows.Forms.Button btn_khachdat;
+        private System.Windows.Forms.Button btn_chonkhachdat;
         private System.Windows.Forms.Label wlbl_ngaydat;
         private System.Windows.Forms.RichTextBox txt_ghichu;
-        private System.Windows.Forms.Label wlbl_khachdat;
+        private System.Windows.Forms.Label wlbl_khachdatphong;
         private System.Windows.Forms.Panel pan_chitietdatphong;
         private System.Windows.Forms.Panel pan_khacho;
         private System.Windows.Forms.Panel pan_chitietdatphonglist;
@@ -1306,28 +1487,27 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvChiTietDatPhong;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_xoakhacho;
+        private System.Windows.Forms.Button btn_themkhacho;
         private System.Windows.Forms.Button btn_xoachitietdatphong;
         private System.Windows.Forms.Button btn_suachitietdatphong;
         private System.Windows.Forms.Button btn_themchitietdatphong;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader ngaynhanphong;
+        private System.Windows.Forms.ColumnHeader ngaytraphong;
+        private System.Windows.Forms.ColumnHeader sophong;
+        private System.Windows.Forms.ColumnHeader idchitietdatphong;
+        private System.Windows.Forms.ColumnHeader idphong;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btn_themsudungdichvu;
+        private System.Windows.Forms.TextBox txt_soluongsudungdichvu;
+        private System.Windows.Forms.ComboBox cbb_themsudungdichvu;
+        private System.Windows.Forms.Button btn_xoasudungdichvu;
+        private System.Windows.Forms.TabPage tabDichvu;
         private System.Windows.Forms.ListView lvDichVu;
         private System.Windows.Forms.ColumnHeader iddichvu;
         private System.Windows.Forms.ColumnHeader tendichvu;
@@ -1382,14 +1562,29 @@
         private System.Windows.Forms.TextBox txt_idkhachhang;
         private System.Windows.Forms.CheckBox ckb_suakhachhang;
         private System.Windows.Forms.ColumnHeader cmnd;
-        private System.Windows.Forms.CheckBox ckb_suachitietdatphong;
+        public System.Windows.Forms.CheckBox ckb_capnhatchitietdatphong;
         private System.Windows.Forms.TextBox txt_iddondatphong;
-        private System.Windows.Forms.CheckBox ckb_dondatphong;
-        private System.Windows.Forms.TextBox txt_idchitietdatphong;
-        private System.Windows.Forms.TextBox txt_idkhachphong;
+        private System.Windows.Forms.CheckBox ckb_suadondatphong;
+        public System.Windows.Forms.TextBox txt_idchitietdatphong;
+        private System.Windows.Forms.TextBox txt_idkhachdatphong;
         private System.Windows.Forms.ColumnHeader emailkhach;
         private System.Windows.Forms.ColumnHeader tennhanvien;
         private System.Windows.Forms.ColumnHeader idkhach;
         private System.Windows.Forms.ColumnHeader idnhanvien;
+        private System.Windows.Forms.ColumnHeader ghichu;
+        private System.Windows.Forms.TextBox txt_tenkhachdatphong;
+        private System.Windows.Forms.ComboBox cbb_nhanviendatphong;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ListView lvKhachO;
+        private System.Windows.Forms.ColumnHeader khacho_hovaten;
+        private System.Windows.Forms.ColumnHeader idkhacho;
+        public System.Windows.Forms.CheckBox ckb_themkhacho;
+        private System.Windows.Forms.ListView lvSuDungDichVu;
+        private System.Windows.Forms.ColumnHeader sddv_ngaysudung;
+        private System.Windows.Forms.ColumnHeader sddd_tendichvu;
+        private System.Windows.Forms.ColumnHeader sddv_soluong;
+        private System.Windows.Forms.ColumnHeader sddv_dongia;
+        private System.Windows.Forms.ColumnHeader sddv_thanhtien;
+        private System.Windows.Forms.ColumnHeader sddv_idsudungdichvu;
     }
 }

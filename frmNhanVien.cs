@@ -22,6 +22,7 @@ namespace QuanLyKhachSan
         {
             HienThiDanhSachNhanVien();
             LayDuLieuComBoboxBoPhan();
+            txt_manv.Focus();
         }
 
         //Lấy dữ liệu cho commbobox bộ phận
@@ -39,11 +40,11 @@ namespace QuanLyKhachSan
 
             if (gf.KetnoiCSDL() == true)
             {
-                SqlCommand sqlCmd = new SqlCommand();
+                SqlCommand sqlCmd = new SqlCommand("select * from viewNhanVien",gf.conn);
                 sqlCmd.CommandType = CommandType.Text;
-                sqlCmd.CommandText = "select * from viewNhanVien";
-                sqlCmd.Connection = gf.conn;
 
+                //Làm trống listview danh sách nhân viên trước khi cập nhật dữ liệu mới
+                lvNhanVien.Items.Clear();
                 SqlDataReader reader = sqlCmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -62,7 +63,7 @@ namespace QuanLyKhachSan
 
                     ListViewItem lvi = new ListViewItem(MaNV.ToString());
                     lvi.SubItems.Add(HoVaTen);
-                    lvi.SubItems.Add(NgaySinh.ToString());
+                    lvi.SubItems.Add(NgaySinh.ToString("dd/MM/yyyy"));
                     lvi.SubItems.Add(GioiTinhText);
                     lvi.SubItems.Add(SoDienThoai);
                     lvi.SubItems.Add(CMND);
@@ -96,7 +97,7 @@ namespace QuanLyKhachSan
                 txt_hovaten.Text = lvNhanVien.SelectedItems[0].SubItems[1].Text;
 
                 txt_ngaysinh.Enabled = false;
-                txt_ngaysinh.Value = DateTime.Parse(lvNhanVien.SelectedItems[0].SubItems[2].Text);
+                txt_ngaysinh.Value = DateTime.ParseExact(lvNhanVien.SelectedItems[0].SubItems[2].Text,"dd/MM/yyyy",null);
 
                 radioNam.Enabled = false; radioNu.Enabled = false;
                 if (lvNhanVien.SelectedItems[0].SubItems[3].Text == "Nam") radioNam.Checked = true; else radioNu.Checked = true; 
@@ -161,11 +162,13 @@ namespace QuanLyKhachSan
             btnThem.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+
+            txt_manv.Focus();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (ckb_Sua.Checked == false)
+            if (!ckb_Sua.Checked && lvNhanVien.SelectedItems.Count>0)
             {
                 ckb_Sua.Checked = true;
 
@@ -181,108 +184,91 @@ namespace QuanLyKhachSan
 
                 // Thay đổi trạng thái nút sửa thành lưu
                 btnSua.Text = "Lưu";
+
+                txt_manv.Focus();
             }
             else
             {
                 // Kiểm tra dữ liệu trước khi cập nhật
-                if (txt_manv.Text.Length <= 0) wlbl_manv.Visible = true; else wlbl_manv.Visible = false;
-                if (txt_hovaten.Text.Length <= 0) wlbl_hovaten.Visible = true; else wlbl_hovaten.Visible = false;
-                if (radioNam.Checked == false && radioNu.Checked == false) wlbl_gioitinh.Visible = true; else wlbl_gioitinh.Visible = false;
-                if (txt_ngaysinh.Text.Length <= 0) wlbl_ngaysinh.Visible = true; else wlbl_ngaysinh.Visible = false;    
-                if (txt_sodienthoai.Text.Length <= 0) wlbl_sodienthoai.Visible = true; else wlbl_sodienthoai.Visible = false;
-                if (txt_cmnd.Text.Length <= 0) wlbl_cmnd.Visible = true; else wlbl_cmnd.Visible = false;
-                if (cbb_bophan.SelectedIndex < 0) wlbl_bophan.Visible = true; else wlbl_bophan.Visible = false;
+                bool validateData = true;
+                if (txt_manv.Text.Length <= 0) { wlbl_manv.Visible = true; validateData = false; }
+                if (txt_hovaten.Text.Length <= 0) { wlbl_hovaten.Visible = true; validateData = false; }
+                if (radioNam.Checked == false && radioNu.Checked == false) { wlbl_gioitinh.Visible = true; validateData = false; }
+                if (txt_ngaysinh.Value == null) { wlbl_ngaysinh.Visible = true; validateData = false; }
+                if (txt_sodienthoai.Text.Length <= 0) { wlbl_sodienthoai.Visible = true; validateData = false; }
+                if (txt_cmnd.Text.Length <= 0) { wlbl_cmnd.Visible = true; validateData = false; }
+                if (cbb_bophan.SelectedIndex < 0) { wlbl_bophan.Visible = true; validateData = false; }
+                if (DateTime.Now.Year - txt_ngaysinh.Value.Year < 16) { wlbl_ngaysinh.Text = "Nhân viên chưa đủ 16 tuổi"; wlbl_ngaysinh.Visible = true; validateData = false; }
+                if (!validateData) { return; }
 
-                if (wlbl_manv.Visible == false && wlbl_hovaten.Visible == false && wlbl_gioitinh.Visible == false && wlbl_ngaysinh.Visible == false && wlbl_sodienthoai.Visible == false && wlbl_cmnd.Visible == false && wlbl_bophan.Visible == false)
+                // Cập nhật vào cơ sở dữ liệu
+                GlobalFuncs gf = new GlobalFuncs();
+                if (gf.KetnoiCSDL() == false)
+                    return;
+                try
                 {
-                    // Cập nhật vào cơ sở dữ liệu
-                    if (lvNhanVien.SelectedItems.Count > 0)
-                    {
-                        try
-                        {
-                            GlobalFuncs gf = new GlobalFuncs();
-                            if (gf.KetnoiCSDL() == false)
-                                return;
-                            SqlCommand cmd = new SqlCommand("prodSuaNhanVien", gf.conn);
-                            cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@MaNV", txt_manv.Text);
-                            cmd.Parameters.AddWithValue("@HoVaten", txt_hovaten.Text);
-                            cmd.Parameters.AddWithValue("@NgaySinh", txt_ngaysinh.Value);
-                            if (radioNam.Checked == false)
-                                cmd.Parameters.AddWithValue("@GioiTinh", 0);
-                            else cmd.Parameters.AddWithValue("@GioiTinh", 1);
-                            cmd.Parameters.AddWithValue("@SoDienThoai", txt_sodienthoai.Text);
-                            cmd.Parameters.AddWithValue("@CMND", txt_cmnd.Text);
-                            cmd.Parameters.AddWithValue("@IDBoPhan", cbb_bophan.SelectedValue);
-                            cmd.Parameters.AddWithValue("@IDNhanVien", lvNhanVien.SelectedItems[0].SubItems[7].Text);
+                    SqlCommand cmd = new SqlCommand("prodSuaNhanVien", gf.conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@MaNV", txt_manv.Text);
+                    cmd.Parameters.AddWithValue("@HoVaten", txt_hovaten.Text);
+                    cmd.Parameters.AddWithValue("@NgaySinh", txt_ngaysinh.Value.ToString("yyyy-MM-dd"));
+                    if (radioNam.Checked == false)
+                        cmd.Parameters.AddWithValue("@GioiTinh", 0);
+                    else cmd.Parameters.AddWithValue("@GioiTinh", 1);
+                    cmd.Parameters.AddWithValue("@SoDienThoai", txt_sodienthoai.Text);
+                    cmd.Parameters.AddWithValue("@CMND", txt_cmnd.Text);
+                    cmd.Parameters.AddWithValue("@IDBoPhan", cbb_bophan.SelectedValue);
+                    cmd.Parameters.AddWithValue("@IDNhanVien", lvNhanVien.SelectedItems[0].SubItems[7].Text);
 
 
-                            cmd.ExecuteNonQuery(); cmd.Dispose();
-                            lvNhanVien.Items.Clear();
-                            HienThiDanhSachNhanVien();
-                        }
-                        catch
-                        {
-                            MessageBox.Show("Lỗi sửa nhân viên", "Thông báo");
-                        }
-                        ckb_Sua.Checked = false;
-                        // Thay đổi trạng thái nút lưu thành sửa
-                        btnSua.Text = "Sửa";
-
-                        // Thay đổi trạng thái các textbox
-                        txt_manv.ReadOnly = true;
-                        txt_hovaten.ReadOnly = true;
-                        txt_ngaysinh.Enabled = false;
-                        radioNam.Enabled = false;
-                        radioNu.Enabled = false;
-                        txt_sodienthoai.ReadOnly = true;
-                        txt_cmnd.ReadOnly = true;
-                        cbb_bophan.Enabled = false;
-                    }
+                    cmd.ExecuteNonQuery(); cmd.Dispose();
+                    
+                } catch {
+                    MessageBox.Show("Lỗi sửa nhân viên", "Thông báo");
                 }
+                lvNhanVien.Items.Clear();
+                HienThiDanhSachNhanVien();
+                reset_InputForm();
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
-            if (txt_manv.Text.Length <= 0) wlbl_manv.Visible = true; else wlbl_manv.Visible = false;
-            if (txt_hovaten.Text.Length <= 0) wlbl_hovaten.Visible = true; else wlbl_hovaten.Visible = false;
-            if (radioNam.Checked == false && radioNu.Checked == false) wlbl_gioitinh.Visible = true; else wlbl_gioitinh.Visible = false;
-            if (txt_ngaysinh.Text.Length <= 0) wlbl_ngaysinh.Visible = true; else wlbl_ngaysinh.Visible = false;
-            if (txt_sodienthoai.Text.Length <= 0) wlbl_sodienthoai.Visible = true; else wlbl_sodienthoai.Visible = false;
-            if (txt_cmnd.Text.Length <= 0) wlbl_cmnd.Visible = true; else wlbl_cmnd.Visible = false;
-            if (cbb_bophan.SelectedIndex < 0) wlbl_bophan.Visible = true; else wlbl_bophan.Visible = false;
-            if (wlbl_manv.Visible == false && wlbl_hovaten.Visible == false && wlbl_gioitinh.Visible == false && wlbl_ngaysinh.Visible == false && wlbl_sodienthoai.Visible == false && wlbl_cmnd.Visible == false && wlbl_bophan.Visible == false)
+            bool validateData = true;
+            if (txt_manv.Text.Length <= 0) { wlbl_manv.Visible = true; validateData = false; }
+            if (txt_hovaten.Text.Length <= 0) { wlbl_hovaten.Visible = true; validateData = false; }
+            if (radioNam.Checked == false && radioNu.Checked == false) { wlbl_gioitinh.Visible = true; validateData = false; }
+            if (txt_ngaysinh.Value==null) { wlbl_ngaysinh.Visible = true;  validateData = false; }
+            if (txt_sodienthoai.Text.Length <= 0) { wlbl_sodienthoai.Visible = true; validateData = false; }
+            if (txt_cmnd.Text.Length <= 0) { wlbl_cmnd.Visible = true; validateData = false; }
+            if (cbb_bophan.SelectedIndex < 0) { wlbl_bophan.Visible = true; validateData = false; } 
+            if (DateTime.Now.Year-txt_ngaysinh.Value.Year<16) { wlbl_ngaysinh.Text = "Nhân viên chưa đủ 16 tuổi";wlbl_ngaysinh.Visible = true; validateData = false; }
+            if (!validateData) { return; }
+            
+            GlobalFuncs gf = new GlobalFuncs();
+            try
             {
-                GlobalFuncs gf = new GlobalFuncs();
-                try
-                {
-                    if (gf.KetnoiCSDL() == false)
-                        return;
-                    SqlCommand cmd = new SqlCommand("prodThemNhanVien", gf.conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@MaNV", txt_manv.Text);
-                    cmd.Parameters.AddWithValue("@HoVaten", txt_hovaten.Text);
-                    if (radioNam.Checked == false)
-                        cmd.Parameters.AddWithValue("@GioiTinh", 0);
-                    else cmd.Parameters.AddWithValue("@GioiTinh", 1);
-                    cmd.Parameters.AddWithValue("@NgaySinh", txt_ngaysinh.Value);
-                    cmd.Parameters.AddWithValue("@SoDienThoai", txt_sodienthoai.Text);
-                    cmd.Parameters.AddWithValue("@CMND", txt_cmnd.Text);
-                    cmd.Parameters.AddWithValue("@IDBoPhan", cbb_bophan.SelectedValue);
-
-                    cmd.ExecuteNonQuery();
-                    lvNhanVien.Items.Clear();
-                    HienThiDanhSachNhanVien();
-                    cmd.Dispose();
-                }
-                catch
-                {
-                    MessageBox.Show("Lỗi thêm dữ liệu", "Thông báo");
-                }
+                if (gf.KetnoiCSDL() == false)
+                    return;
+                SqlCommand cmd = new SqlCommand("prodThemNhanVien", gf.conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@MaNV", txt_manv.Text);
+                cmd.Parameters.AddWithValue("@HoVaten", txt_hovaten.Text);
+                if (radioNam.Checked == false)
+                    cmd.Parameters.AddWithValue("@GioiTinh", 0);
+                else cmd.Parameters.AddWithValue("@GioiTinh", 1);
+                cmd.Parameters.AddWithValue("@NgaySinh", txt_ngaysinh.Value.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@SoDienThoai", txt_sodienthoai.Text);
+                cmd.Parameters.AddWithValue("@CMND", txt_cmnd.Text);
+                cmd.Parameters.AddWithValue("@IDBoPhan", cbb_bophan.SelectedValue);
+                cmd.ExecuteNonQuery();cmd.Dispose();
             }
-
+            catch
+            {
+                MessageBox.Show("Lỗi thêm dữ liệu", "Thông báo");
+            }
+            HienThiDanhSachNhanVien();
+            reset_InputForm();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -291,19 +277,18 @@ namespace QuanLyKhachSan
             if (lvNhanVien.SelectedItems.Count > 0)
             {
                 GlobalFuncs gf = new GlobalFuncs();
+                if (gf.KetnoiCSDL() == false)
+                    return;
                 try
                 {
-                    if (gf.KetnoiCSDL() == false)
-                        return;
                     gf.Xoadulieu("prodXoaNhanVien", "@IDNhanVien", lvNhanVien.SelectedItems[0].SubItems[7].Text);
                     lvNhanVien.Items.Clear();
-                    HienThiDanhSachNhanVien();
-                    reset_InputForm();
-                }
-                catch
-                {
+                    
+                } catch {
                     MessageBox.Show("Lỗi xóa nhân viên", "Thông báo");
                 }
+                HienThiDanhSachNhanVien();
+                reset_InputForm();
             }
         }
 
