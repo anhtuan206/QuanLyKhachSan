@@ -41,6 +41,7 @@
             this.panListBoPhan = new System.Windows.Forms.Panel();
             this.panControlBoPhan = new System.Windows.Forms.Panel();
             this.lblBoPhanFormTitle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.boPhanBindingSource)).BeginInit();
             this.panListBoPhan.SuspendLayout();
             this.panControlBoPhan.SuspendLayout();
@@ -73,26 +74,20 @@
             this.lvBoPhan_Ten.Text = "Tên bộ phận";
             this.lvBoPhan_Ten.Width = 200;
             // 
-            // tuanpa2_QuanLyKhachSanDataSet
-            // 
-            // 
             // boPhanBindingSource
             // 
             this.boPhanBindingSource.DataMember = "BoPhan";
             // 
-            // boPhanTableAdapter
-            // 
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(14, 56);
+            this.textBox1.Location = new System.Drawing.Point(90, 56);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(231, 20);
             this.textBox1.TabIndex = 2;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(440, 50);
+            this.btnThem.Location = new System.Drawing.Point(346, 50);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 31);
             this.btnThem.TabIndex = 3;
@@ -103,7 +98,7 @@
             // btnSua
             // 
             this.btnSua.Enabled = false;
-            this.btnSua.Location = new System.Drawing.Point(521, 50);
+            this.btnSua.Location = new System.Drawing.Point(427, 50);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 31);
             this.btnSua.TabIndex = 3;
@@ -114,7 +109,7 @@
             // btnXoa
             // 
             this.btnXoa.Enabled = false;
-            this.btnXoa.Location = new System.Drawing.Point(602, 50);
+            this.btnXoa.Location = new System.Drawing.Point(508, 50);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 31);
             this.btnXoa.TabIndex = 3;
@@ -126,11 +121,11 @@
             // 
             this.wlbl_bophan.AutoSize = true;
             this.wlbl_bophan.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_bophan.Location = new System.Drawing.Point(16, 79);
+            this.wlbl_bophan.Location = new System.Drawing.Point(92, 79);
             this.wlbl_bophan.Name = "wlbl_bophan";
-            this.wlbl_bophan.Size = new System.Drawing.Size(35, 13);
+            this.wlbl_bophan.Size = new System.Drawing.Size(132, 13);
             this.wlbl_bophan.TabIndex = 4;
-            this.wlbl_bophan.Text = "label1";
+            this.wlbl_bophan.Text = "Vui lòng nhập tên bộ phận";
             this.wlbl_bophan.Visible = false;
             // 
             // panListBoPhan
@@ -145,6 +140,7 @@
             // 
             // panControlBoPhan
             // 
+            this.panControlBoPhan.Controls.Add(this.label1);
             this.panControlBoPhan.Controls.Add(this.lblBoPhanFormTitle);
             this.panControlBoPhan.Controls.Add(this.btnThem);
             this.panControlBoPhan.Controls.Add(this.btnSua);
@@ -166,6 +162,15 @@
             this.lblBoPhanFormTitle.Size = new System.Drawing.Size(187, 29);
             this.lblBoPhanFormTitle.TabIndex = 5;
             this.lblBoPhanFormTitle.Text = "Quản lý bộ phận";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Tên bộ phận";
             // 
             // frmBoPhan
             // 
@@ -198,5 +203,6 @@
         private System.Windows.Forms.Panel panListBoPhan;
         private System.Windows.Forms.Panel panControlBoPhan;
         private System.Windows.Forms.Label lblBoPhanFormTitle;
+        private System.Windows.Forms.Label label1;
     }
 }

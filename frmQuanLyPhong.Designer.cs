@@ -155,6 +155,7 @@
             this.lvPhong.Name = "lvPhong";
             this.lvPhong.Size = new System.Drawing.Size(808, 574);
             this.lvPhong.TabIndex = 3;
+            this.lvPhong.TabStop = false;
             this.lvPhong.UseCompatibleStateImageBehavior = false;
             this.lvPhong.View = System.Windows.Forms.View.Details;
             this.lvPhong.SelectedIndexChanged += new System.EventHandler(this.lvPhong_SelectedIndexChanged);
@@ -235,36 +236,38 @@
             // cbb_loaiphong
             // 
             this.cbb_loaiphong.FormattingEnabled = true;
-            this.cbb_loaiphong.Location = new System.Drawing.Point(16, 366);
+            this.cbb_loaiphong.Location = new System.Drawing.Point(17, 316);
             this.cbb_loaiphong.Name = "cbb_loaiphong";
             this.cbb_loaiphong.Size = new System.Drawing.Size(247, 21);
-            this.cbb_loaiphong.TabIndex = 105;
+            this.cbb_loaiphong.TabIndex = 5;
             // 
             // cbb_trangthai
             // 
             this.cbb_trangthai.FormattingEnabled = true;
-            this.cbb_trangthai.Location = new System.Drawing.Point(16, 147);
+            this.cbb_trangthai.Location = new System.Drawing.Point(17, 97);
             this.cbb_trangthai.Name = "cbb_trangthai";
             this.cbb_trangthai.Size = new System.Drawing.Size(247, 21);
-            this.cbb_trangthai.TabIndex = 102;
+            this.cbb_trangthai.TabIndex = 2;
             // 
             // txt_idphong
             // 
             this.txt_idphong.Enabled = false;
-            this.txt_idphong.Location = new System.Drawing.Point(207, 49);
+            this.txt_idphong.Location = new System.Drawing.Point(187, 418);
             this.txt_idphong.Name = "txt_idphong";
             this.txt_idphong.Size = new System.Drawing.Size(56, 20);
             this.txt_idphong.TabIndex = 36;
+            this.txt_idphong.TabStop = false;
             this.txt_idphong.Visible = false;
             // 
             // ckb_suaphong
             // 
             this.ckb_suaphong.AutoSize = true;
             this.ckb_suaphong.Enabled = false;
-            this.ckb_suaphong.Location = new System.Drawing.Point(186, 52);
+            this.ckb_suaphong.Location = new System.Drawing.Point(166, 421);
             this.ckb_suaphong.Name = "ckb_suaphong";
             this.ckb_suaphong.Size = new System.Drawing.Size(15, 14);
             this.ckb_suaphong.TabIndex = 35;
+            this.ckb_suaphong.TabStop = false;
             this.ckb_suaphong.UseVisualStyleBackColor = true;
             this.ckb_suaphong.Visible = false;
             // 
@@ -272,7 +275,7 @@
             // 
             this.wlbl_cbb_loaiphong.AutoSize = true;
             this.wlbl_cbb_loaiphong.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_cbb_loaiphong.Location = new System.Drawing.Point(13, 388);
+            this.wlbl_cbb_loaiphong.Location = new System.Drawing.Point(14, 338);
             this.wlbl_cbb_loaiphong.Name = "wlbl_cbb_loaiphong";
             this.wlbl_cbb_loaiphong.Size = new System.Drawing.Size(124, 13);
             this.wlbl_cbb_loaiphong.TabIndex = 34;
@@ -283,7 +286,7 @@
             // 
             this.wlbl_cbb_trangthai.AutoSize = true;
             this.wlbl_cbb_trangthai.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_cbb_trangthai.Location = new System.Drawing.Point(13, 169);
+            this.wlbl_cbb_trangthai.Location = new System.Drawing.Point(14, 119);
             this.wlbl_cbb_trangthai.Name = "wlbl_cbb_trangthai";
             this.wlbl_cbb_trangthai.Size = new System.Drawing.Size(152, 13);
             this.wlbl_cbb_trangthai.TabIndex = 34;
@@ -294,7 +297,7 @@
             // 
             this.wlbl_sodienthoai.AutoSize = true;
             this.wlbl_sodienthoai.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_sodienthoai.Location = new System.Drawing.Point(13, 315);
+            this.wlbl_sodienthoai.Location = new System.Drawing.Point(14, 265);
             this.wlbl_sodienthoai.Name = "wlbl_sodienthoai";
             this.wlbl_sodienthoai.Size = new System.Drawing.Size(136, 13);
             this.wlbl_sodienthoai.TabIndex = 34;
@@ -305,7 +308,7 @@
             // 
             this.wlbl_tang.AutoSize = true;
             this.wlbl_tang.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_tang.Location = new System.Drawing.Point(13, 242);
+            this.wlbl_tang.Location = new System.Drawing.Point(14, 192);
             this.wlbl_tang.Name = "wlbl_tang";
             this.wlbl_tang.Size = new System.Drawing.Size(110, 13);
             this.wlbl_tang.TabIndex = 34;
@@ -315,7 +318,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 349);
+            this.label6.Location = new System.Drawing.Point(14, 299);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 32;
@@ -325,7 +328,7 @@
             // 
             this.wlbl_sophong.AutoSize = true;
             this.wlbl_sophong.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_sophong.Location = new System.Drawing.Point(13, 98);
+            this.wlbl_sophong.Location = new System.Drawing.Point(14, 48);
             this.wlbl_sophong.Name = "wlbl_sophong";
             this.wlbl_sophong.Size = new System.Drawing.Size(119, 13);
             this.wlbl_sophong.TabIndex = 34;
@@ -335,7 +338,7 @@
             // lbl_trangthai
             // 
             this.lbl_trangthai.AutoSize = true;
-            this.lbl_trangthai.Location = new System.Drawing.Point(13, 130);
+            this.lbl_trangthai.Location = new System.Drawing.Point(14, 80);
             this.lbl_trangthai.Name = "lbl_trangthai";
             this.lbl_trangthai.Size = new System.Drawing.Size(55, 13);
             this.lbl_trangthai.TabIndex = 32;
@@ -343,15 +346,15 @@
             // 
             // txt_dienthoai
             // 
-            this.txt_dienthoai.Location = new System.Drawing.Point(16, 292);
+            this.txt_dienthoai.Location = new System.Drawing.Point(17, 242);
             this.txt_dienthoai.Name = "txt_dienthoai";
             this.txt_dienthoai.Size = new System.Drawing.Size(247, 20);
-            this.txt_dienthoai.TabIndex = 104;
+            this.txt_dienthoai.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 276);
+            this.label3.Location = new System.Drawing.Point(14, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 32;
@@ -359,15 +362,15 @@
             // 
             // txt_tang
             // 
-            this.txt_tang.Location = new System.Drawing.Point(16, 219);
+            this.txt_tang.Location = new System.Drawing.Point(17, 169);
             this.txt_tang.Name = "txt_tang";
             this.txt_tang.Size = new System.Drawing.Size(247, 20);
-            this.txt_tang.TabIndex = 103;
+            this.txt_tang.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 203);
+            this.label1.Location = new System.Drawing.Point(14, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 32;
@@ -375,15 +378,15 @@
             // 
             // txt_sophong
             // 
-            this.txt_sophong.Location = new System.Drawing.Point(16, 75);
+            this.txt_sophong.Location = new System.Drawing.Point(17, 25);
             this.txt_sophong.Name = "txt_sophong";
             this.txt_sophong.Size = new System.Drawing.Size(247, 20);
-            this.txt_sophong.TabIndex = 101;
+            this.txt_sophong.TabIndex = 1;
             // 
             // lbl_sophong
             // 
             this.lbl_sophong.AutoSize = true;
-            this.lbl_sophong.Location = new System.Drawing.Point(13, 59);
+            this.lbl_sophong.Location = new System.Drawing.Point(14, 9);
             this.lbl_sophong.Name = "lbl_sophong";
             this.lbl_sophong.Size = new System.Drawing.Size(53, 13);
             this.lbl_sophong.TabIndex = 32;
@@ -391,10 +394,10 @@
             // 
             // btnThemPhong
             // 
-            this.btnThemPhong.Location = new System.Drawing.Point(16, 3);
+            this.btnThemPhong.Location = new System.Drawing.Point(25, 368);
             this.btnThemPhong.Name = "btnThemPhong";
             this.btnThemPhong.Size = new System.Drawing.Size(75, 31);
-            this.btnThemPhong.TabIndex = 106;
+            this.btnThemPhong.TabIndex = 6;
             this.btnThemPhong.Text = "Thêm";
             this.btnThemPhong.UseVisualStyleBackColor = true;
             this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
@@ -402,10 +405,10 @@
             // btnSuaPhong
             // 
             this.btnSuaPhong.Enabled = false;
-            this.btnSuaPhong.Location = new System.Drawing.Point(97, 3);
+            this.btnSuaPhong.Location = new System.Drawing.Point(106, 368);
             this.btnSuaPhong.Name = "btnSuaPhong";
             this.btnSuaPhong.Size = new System.Drawing.Size(75, 31);
-            this.btnSuaPhong.TabIndex = 107;
+            this.btnSuaPhong.TabIndex = 7;
             this.btnSuaPhong.Text = "Sửa";
             this.btnSuaPhong.UseVisualStyleBackColor = true;
             this.btnSuaPhong.Click += new System.EventHandler(this.btnSuaPhong_Click);
@@ -413,10 +416,10 @@
             // btnXoaPhong
             // 
             this.btnXoaPhong.Enabled = false;
-            this.btnXoaPhong.Location = new System.Drawing.Point(178, 3);
+            this.btnXoaPhong.Location = new System.Drawing.Point(187, 368);
             this.btnXoaPhong.Name = "btnXoaPhong";
             this.btnXoaPhong.Size = new System.Drawing.Size(75, 31);
-            this.btnXoaPhong.TabIndex = 108;
+            this.btnXoaPhong.TabIndex = 8;
             this.btnXoaPhong.Text = "Xóa";
             this.btnXoaPhong.UseVisualStyleBackColor = true;
             this.btnXoaPhong.Click += new System.EventHandler(this.btnXoaPhong_Click);
@@ -446,8 +449,9 @@
             this.lvLoaiPhong.HideSelection = false;
             this.lvLoaiPhong.Location = new System.Drawing.Point(3, 3);
             this.lvLoaiPhong.Name = "lvLoaiPhong";
-            this.lvLoaiPhong.Size = new System.Drawing.Size(808, 574);
+            this.lvLoaiPhong.Size = new System.Drawing.Size(827, 574);
             this.lvLoaiPhong.TabIndex = 3;
+            this.lvLoaiPhong.TabStop = false;
             this.lvLoaiPhong.UseCompatibleStateImageBehavior = false;
             this.lvLoaiPhong.View = System.Windows.Forms.View.Details;
             this.lvLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.lvLoaiPhong_SelectedIndexChanged);
@@ -488,28 +492,30 @@
             this.panel4.Controls.Add(this.btnSuaLoaiPhong);
             this.panel4.Controls.Add(this.btnXoaLoaiPhong);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(811, 3);
+            this.panel4.Location = new System.Drawing.Point(830, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(279, 574);
+            this.panel4.Size = new System.Drawing.Size(260, 574);
             this.panel4.TabIndex = 1;
             // 
             // txt_idloaiphong
             // 
             this.txt_idloaiphong.Enabled = false;
-            this.txt_idloaiphong.Location = new System.Drawing.Point(207, 51);
+            this.txt_idloaiphong.Location = new System.Drawing.Point(178, 284);
             this.txt_idloaiphong.Name = "txt_idloaiphong";
             this.txt_idloaiphong.Size = new System.Drawing.Size(56, 20);
             this.txt_idloaiphong.TabIndex = 31;
+            this.txt_idloaiphong.TabStop = false;
             this.txt_idloaiphong.Visible = false;
             // 
             // ckb_sualoaiphong
             // 
             this.ckb_sualoaiphong.AutoSize = true;
             this.ckb_sualoaiphong.Enabled = false;
-            this.ckb_sualoaiphong.Location = new System.Drawing.Point(186, 54);
+            this.ckb_sualoaiphong.Location = new System.Drawing.Point(157, 287);
             this.ckb_sualoaiphong.Name = "ckb_sualoaiphong";
             this.ckb_sualoaiphong.Size = new System.Drawing.Size(15, 14);
             this.ckb_sualoaiphong.TabIndex = 30;
+            this.ckb_sualoaiphong.TabStop = false;
             this.ckb_sualoaiphong.UseVisualStyleBackColor = true;
             this.ckb_sualoaiphong.Visible = false;
             // 
@@ -517,7 +523,7 @@
             // 
             this.wlbl_dongia.AutoSize = true;
             this.wlbl_dongia.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_dongia.Location = new System.Drawing.Point(13, 256);
+            this.wlbl_dongia.Location = new System.Drawing.Point(3, 203);
             this.wlbl_dongia.Name = "wlbl_dongia";
             this.wlbl_dongia.Size = new System.Drawing.Size(111, 13);
             this.wlbl_dongia.TabIndex = 29;
@@ -528,7 +534,7 @@
             // 
             this.wlbl_succhua.AutoSize = true;
             this.wlbl_succhua.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_succhua.Location = new System.Drawing.Point(13, 179);
+            this.wlbl_succhua.Location = new System.Drawing.Point(3, 126);
             this.wlbl_succhua.Name = "wlbl_succhua";
             this.wlbl_succhua.Size = new System.Drawing.Size(119, 13);
             this.wlbl_succhua.TabIndex = 29;
@@ -537,22 +543,22 @@
             // 
             // txt_dongia
             // 
-            this.txt_dongia.Location = new System.Drawing.Point(16, 233);
+            this.txt_dongia.Location = new System.Drawing.Point(6, 180);
             this.txt_dongia.Name = "txt_dongia";
             this.txt_dongia.Size = new System.Drawing.Size(247, 20);
-            this.txt_dongia.TabIndex = 28;
+            this.txt_dongia.TabIndex = 203;
             // 
             // txt_succhua
             // 
-            this.txt_succhua.Location = new System.Drawing.Point(16, 156);
+            this.txt_succhua.Location = new System.Drawing.Point(6, 103);
             this.txt_succhua.Name = "txt_succhua";
             this.txt_succhua.Size = new System.Drawing.Size(247, 20);
-            this.txt_succhua.TabIndex = 28;
+            this.txt_succhua.TabIndex = 202;
             // 
             // lbl_dongia
             // 
             this.lbl_dongia.AutoSize = true;
-            this.lbl_dongia.Location = new System.Drawing.Point(13, 217);
+            this.lbl_dongia.Location = new System.Drawing.Point(3, 164);
             this.lbl_dongia.Name = "lbl_dongia";
             this.lbl_dongia.Size = new System.Drawing.Size(44, 13);
             this.lbl_dongia.TabIndex = 27;
@@ -562,7 +568,7 @@
             // 
             this.wlbl_loaiphong.AutoSize = true;
             this.wlbl_loaiphong.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_loaiphong.Location = new System.Drawing.Point(13, 100);
+            this.wlbl_loaiphong.Location = new System.Drawing.Point(3, 47);
             this.wlbl_loaiphong.Name = "wlbl_loaiphong";
             this.wlbl_loaiphong.Size = new System.Drawing.Size(124, 13);
             this.wlbl_loaiphong.TabIndex = 29;
@@ -572,7 +578,7 @@
             // lbl_succhua
             // 
             this.lbl_succhua.AutoSize = true;
-            this.lbl_succhua.Location = new System.Drawing.Point(13, 140);
+            this.lbl_succhua.Location = new System.Drawing.Point(3, 87);
             this.lbl_succhua.Name = "lbl_succhua";
             this.lbl_succhua.Size = new System.Drawing.Size(53, 13);
             this.lbl_succhua.TabIndex = 27;
@@ -580,15 +586,15 @@
             // 
             // txt_loaiphong
             // 
-            this.txt_loaiphong.Location = new System.Drawing.Point(16, 77);
+            this.txt_loaiphong.Location = new System.Drawing.Point(6, 24);
             this.txt_loaiphong.Name = "txt_loaiphong";
             this.txt_loaiphong.Size = new System.Drawing.Size(247, 20);
-            this.txt_loaiphong.TabIndex = 28;
+            this.txt_loaiphong.TabIndex = 201;
             // 
             // lbl_loaiphong
             // 
             this.lbl_loaiphong.AutoSize = true;
-            this.lbl_loaiphong.Location = new System.Drawing.Point(13, 61);
+            this.lbl_loaiphong.Location = new System.Drawing.Point(3, 8);
             this.lbl_loaiphong.Name = "lbl_loaiphong";
             this.lbl_loaiphong.Size = new System.Drawing.Size(60, 13);
             this.lbl_loaiphong.TabIndex = 27;
@@ -596,10 +602,10 @@
             // 
             // btnThemLoaiPhong
             // 
-            this.btnThemLoaiPhong.Location = new System.Drawing.Point(16, 3);
+            this.btnThemLoaiPhong.Location = new System.Drawing.Point(16, 233);
             this.btnThemLoaiPhong.Name = "btnThemLoaiPhong";
             this.btnThemLoaiPhong.Size = new System.Drawing.Size(75, 31);
-            this.btnThemLoaiPhong.TabIndex = 7;
+            this.btnThemLoaiPhong.TabIndex = 204;
             this.btnThemLoaiPhong.Text = "Thêm";
             this.btnThemLoaiPhong.UseVisualStyleBackColor = true;
             this.btnThemLoaiPhong.Click += new System.EventHandler(this.btnThemLoaiPhong_Click);
@@ -607,10 +613,10 @@
             // btnSuaLoaiPhong
             // 
             this.btnSuaLoaiPhong.Enabled = false;
-            this.btnSuaLoaiPhong.Location = new System.Drawing.Point(97, 3);
+            this.btnSuaLoaiPhong.Location = new System.Drawing.Point(97, 233);
             this.btnSuaLoaiPhong.Name = "btnSuaLoaiPhong";
             this.btnSuaLoaiPhong.Size = new System.Drawing.Size(75, 31);
-            this.btnSuaLoaiPhong.TabIndex = 8;
+            this.btnSuaLoaiPhong.TabIndex = 205;
             this.btnSuaLoaiPhong.Text = "Sửa";
             this.btnSuaLoaiPhong.UseVisualStyleBackColor = true;
             this.btnSuaLoaiPhong.Click += new System.EventHandler(this.btnSuaLoaiPhong_Click);
@@ -618,10 +624,10 @@
             // btnXoaLoaiPhong
             // 
             this.btnXoaLoaiPhong.Enabled = false;
-            this.btnXoaLoaiPhong.Location = new System.Drawing.Point(178, 3);
+            this.btnXoaLoaiPhong.Location = new System.Drawing.Point(178, 233);
             this.btnXoaLoaiPhong.Name = "btnXoaLoaiPhong";
             this.btnXoaLoaiPhong.Size = new System.Drawing.Size(75, 31);
-            this.btnXoaLoaiPhong.TabIndex = 9;
+            this.btnXoaLoaiPhong.TabIndex = 206;
             this.btnXoaLoaiPhong.Text = "Xóa";
             this.btnXoaLoaiPhong.UseVisualStyleBackColor = true;
             this.btnXoaLoaiPhong.Click += new System.EventHandler(this.btnXoaLoaiPhong_Click);
@@ -651,6 +657,7 @@
             this.lvTrangThaiPhong.Name = "lvTrangThaiPhong";
             this.lvTrangThaiPhong.Size = new System.Drawing.Size(808, 574);
             this.lvTrangThaiPhong.TabIndex = 2;
+            this.lvTrangThaiPhong.TabStop = false;
             this.lvTrangThaiPhong.UseCompatibleStateImageBehavior = false;
             this.lvTrangThaiPhong.View = System.Windows.Forms.View.Details;
             this.lvTrangThaiPhong.SelectedIndexChanged += new System.EventHandler(this.lvTrangThaiPhong_SelectedIndexChanged);
@@ -683,20 +690,22 @@
             // txt_idtrangthaiphong
             // 
             this.txt_idtrangthaiphong.Enabled = false;
-            this.txt_idtrangthaiphong.Location = new System.Drawing.Point(207, 57);
+            this.txt_idtrangthaiphong.Location = new System.Drawing.Point(199, 139);
             this.txt_idtrangthaiphong.Name = "txt_idtrangthaiphong";
             this.txt_idtrangthaiphong.Size = new System.Drawing.Size(56, 20);
             this.txt_idtrangthaiphong.TabIndex = 26;
+            this.txt_idtrangthaiphong.TabStop = false;
             this.txt_idtrangthaiphong.Visible = false;
             // 
             // ckb_SuaTrangThaiPhong
             // 
             this.ckb_SuaTrangThaiPhong.AutoSize = true;
             this.ckb_SuaTrangThaiPhong.Enabled = false;
-            this.ckb_SuaTrangThaiPhong.Location = new System.Drawing.Point(186, 60);
+            this.ckb_SuaTrangThaiPhong.Location = new System.Drawing.Point(178, 142);
             this.ckb_SuaTrangThaiPhong.Name = "ckb_SuaTrangThaiPhong";
             this.ckb_SuaTrangThaiPhong.Size = new System.Drawing.Size(15, 14);
             this.ckb_SuaTrangThaiPhong.TabIndex = 25;
+            this.ckb_SuaTrangThaiPhong.TabStop = false;
             this.ckb_SuaTrangThaiPhong.UseVisualStyleBackColor = true;
             this.ckb_SuaTrangThaiPhong.Visible = false;
             this.ckb_SuaTrangThaiPhong.CheckedChanged += new System.EventHandler(this.ckb_SuaTrangThaiPhong_CheckedChanged);
@@ -705,7 +714,7 @@
             // 
             this.wlbl_tentrangthai.AutoSize = true;
             this.wlbl_tentrangthai.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_tentrangthai.Location = new System.Drawing.Point(13, 106);
+            this.wlbl_tentrangthai.Location = new System.Drawing.Point(3, 50);
             this.wlbl_tentrangthai.Name = "wlbl_tentrangthai";
             this.wlbl_tentrangthai.Size = new System.Drawing.Size(170, 13);
             this.wlbl_tentrangthai.TabIndex = 24;
@@ -714,15 +723,15 @@
             // 
             // txt_trangthai
             // 
-            this.txt_trangthai.Location = new System.Drawing.Point(16, 83);
+            this.txt_trangthai.Location = new System.Drawing.Point(6, 27);
             this.txt_trangthai.Name = "txt_trangthai";
             this.txt_trangthai.Size = new System.Drawing.Size(247, 20);
-            this.txt_trangthai.TabIndex = 23;
+            this.txt_trangthai.TabIndex = 301;
             // 
             // lbl_tentrangthai
             // 
             this.lbl_tentrangthai.AutoSize = true;
-            this.lbl_tentrangthai.Location = new System.Drawing.Point(13, 67);
+            this.lbl_tentrangthai.Location = new System.Drawing.Point(6, 11);
             this.lbl_tentrangthai.Name = "lbl_tentrangthai";
             this.lbl_tentrangthai.Size = new System.Drawing.Size(106, 13);
             this.lbl_tentrangthai.TabIndex = 22;
@@ -730,10 +739,10 @@
             // 
             // btnThemTrangThaiPhong
             // 
-            this.btnThemTrangThaiPhong.Location = new System.Drawing.Point(24, 3);
+            this.btnThemTrangThaiPhong.Location = new System.Drawing.Point(16, 85);
             this.btnThemTrangThaiPhong.Name = "btnThemTrangThaiPhong";
             this.btnThemTrangThaiPhong.Size = new System.Drawing.Size(75, 31);
-            this.btnThemTrangThaiPhong.TabIndex = 7;
+            this.btnThemTrangThaiPhong.TabIndex = 302;
             this.btnThemTrangThaiPhong.Text = "Thêm";
             this.btnThemTrangThaiPhong.UseVisualStyleBackColor = true;
             this.btnThemTrangThaiPhong.Click += new System.EventHandler(this.btnThemTrangThaiPhong_Click);
@@ -741,10 +750,10 @@
             // btnSuaTrangThaiPhong
             // 
             this.btnSuaTrangThaiPhong.Enabled = false;
-            this.btnSuaTrangThaiPhong.Location = new System.Drawing.Point(105, 3);
+            this.btnSuaTrangThaiPhong.Location = new System.Drawing.Point(97, 85);
             this.btnSuaTrangThaiPhong.Name = "btnSuaTrangThaiPhong";
             this.btnSuaTrangThaiPhong.Size = new System.Drawing.Size(75, 31);
-            this.btnSuaTrangThaiPhong.TabIndex = 8;
+            this.btnSuaTrangThaiPhong.TabIndex = 303;
             this.btnSuaTrangThaiPhong.Text = "Sửa";
             this.btnSuaTrangThaiPhong.UseVisualStyleBackColor = true;
             this.btnSuaTrangThaiPhong.Click += new System.EventHandler(this.btnSuaTrangThaiPhong_Click);
@@ -752,10 +761,10 @@
             // btnXoaTrangThaiPhong
             // 
             this.btnXoaTrangThaiPhong.Enabled = false;
-            this.btnXoaTrangThaiPhong.Location = new System.Drawing.Point(186, 3);
+            this.btnXoaTrangThaiPhong.Location = new System.Drawing.Point(178, 85);
             this.btnXoaTrangThaiPhong.Name = "btnXoaTrangThaiPhong";
             this.btnXoaTrangThaiPhong.Size = new System.Drawing.Size(75, 31);
-            this.btnXoaTrangThaiPhong.TabIndex = 9;
+            this.btnXoaTrangThaiPhong.TabIndex = 304;
             this.btnXoaTrangThaiPhong.Text = "Xóa";
             this.btnXoaTrangThaiPhong.UseVisualStyleBackColor = true;
             this.btnXoaTrangThaiPhong.Click += new System.EventHandler(this.btnXoaTrangThaiPhong_Click);

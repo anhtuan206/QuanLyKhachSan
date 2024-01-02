@@ -149,6 +149,7 @@
             this.lvKhachHang.Name = "lvKhachHang";
             this.lvKhachHang.Size = new System.Drawing.Size(767, 435);
             this.lvKhachHang.TabIndex = 2;
+            this.lvKhachHang.TabStop = false;
             this.lvKhachHang.UseCompatibleStateImageBehavior = false;
             this.lvKhachHang.View = System.Windows.Forms.View.Details;
             this.lvKhachHang.SelectedIndexChanged += new System.EventHandler(this.lvKhachHang_SelectedIndexChanged);
@@ -239,19 +240,21 @@
             // 
             // txt_idkhachhang
             // 
-            this.txt_idkhachhang.Location = new System.Drawing.Point(166, 39);
+            this.txt_idkhachhang.Location = new System.Drawing.Point(158, 445);
             this.txt_idkhachhang.Name = "txt_idkhachhang";
             this.txt_idkhachhang.Size = new System.Drawing.Size(100, 20);
             this.txt_idkhachhang.TabIndex = 29;
+            this.txt_idkhachhang.TabStop = false;
             this.txt_idkhachhang.Visible = false;
             // 
             // ckb_suakhachhang
             // 
             this.ckb_suakhachhang.AutoSize = true;
-            this.ckb_suakhachhang.Location = new System.Drawing.Point(128, 46);
+            this.ckb_suakhachhang.Location = new System.Drawing.Point(127, 448);
             this.ckb_suakhachhang.Name = "ckb_suakhachhang";
             this.ckb_suakhachhang.Size = new System.Drawing.Size(15, 14);
             this.ckb_suakhachhang.TabIndex = 28;
+            this.ckb_suakhachhang.TabStop = false;
             this.ckb_suakhachhang.UseVisualStyleBackColor = true;
             this.ckb_suakhachhang.Visible = false;
             // 
@@ -259,7 +262,7 @@
             // 
             this.panel10.Controls.Add(this.radioNu);
             this.panel10.Controls.Add(this.radioNam);
-            this.panel10.Location = new System.Drawing.Point(7, 221);
+            this.panel10.Location = new System.Drawing.Point(6, 169);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(306, 29);
             this.panel10.TabIndex = 27;
@@ -270,7 +273,7 @@
             this.radioNu.Location = new System.Drawing.Point(143, 4);
             this.radioNu.Name = "radioNu";
             this.radioNu.Size = new System.Drawing.Size(39, 17);
-            this.radioNu.TabIndex = 1;
+            this.radioNu.TabIndex = 4;
             this.radioNu.TabStop = true;
             this.radioNu.Text = "Nữ";
             this.radioNu.UseVisualStyleBackColor = true;
@@ -281,29 +284,29 @@
             this.radioNam.Location = new System.Drawing.Point(25, 4);
             this.radioNam.Name = "radioNam";
             this.radioNam.Size = new System.Drawing.Size(47, 17);
-            this.radioNam.TabIndex = 0;
+            this.radioNam.TabIndex = 3;
             this.radioNam.TabStop = true;
             this.radioNam.Text = "Nam";
             this.radioNam.UseVisualStyleBackColor = true;
             // 
             // txt_ngaysinh
             // 
-            this.txt_ngaysinh.Location = new System.Drawing.Point(7, 149);
+            this.txt_ngaysinh.Location = new System.Drawing.Point(6, 97);
             this.txt_ngaysinh.Name = "txt_ngaysinh";
             this.txt_ngaysinh.Size = new System.Drawing.Size(306, 20);
-            this.txt_ngaysinh.TabIndex = 26;
+            this.txt_ngaysinh.TabIndex = 2;
             // 
             // txt_cmnd
             // 
-            this.txt_cmnd.Location = new System.Drawing.Point(7, 412);
+            this.txt_cmnd.Location = new System.Drawing.Point(6, 360);
             this.txt_cmnd.Name = "txt_cmnd";
             this.txt_cmnd.Size = new System.Drawing.Size(306, 20);
-            this.txt_cmnd.TabIndex = 25;
+            this.txt_cmnd.TabIndex = 7;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 396);
+            this.label9.Location = new System.Drawing.Point(3, 344);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 13);
             this.label9.TabIndex = 20;
@@ -311,15 +314,15 @@
             // 
             // txt_email
             // 
-            this.txt_email.Location = new System.Drawing.Point(7, 350);
+            this.txt_email.Location = new System.Drawing.Point(6, 298);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(306, 20);
-            this.txt_email.TabIndex = 24;
+            this.txt_email.TabIndex = 6;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(4, 334);
+            this.label8.Location = new System.Drawing.Point(3, 282);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 19;
@@ -327,15 +330,15 @@
             // 
             // txt_sdt
             // 
-            this.txt_sdt.Location = new System.Drawing.Point(7, 288);
+            this.txt_sdt.Location = new System.Drawing.Point(6, 236);
             this.txt_sdt.Name = "txt_sdt";
             this.txt_sdt.Size = new System.Drawing.Size(306, 20);
-            this.txt_sdt.TabIndex = 23;
+            this.txt_sdt.TabIndex = 5;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 272);
+            this.label7.Location = new System.Drawing.Point(3, 220);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 18;
@@ -344,7 +347,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 204);
+            this.label6.Location = new System.Drawing.Point(3, 152);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 21;
@@ -353,7 +356,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 133);
+            this.label5.Location = new System.Drawing.Point(3, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 17;
@@ -361,16 +364,16 @@
             // 
             // txt_hovaten
             // 
-            this.txt_hovaten.Location = new System.Drawing.Point(7, 78);
+            this.txt_hovaten.Location = new System.Drawing.Point(6, 26);
             this.txt_hovaten.Name = "txt_hovaten";
             this.txt_hovaten.Size = new System.Drawing.Size(306, 20);
-            this.txt_hovaten.TabIndex = 22;
+            this.txt_hovaten.TabIndex = 1;
             // 
             // wlbl_cmnd
             // 
             this.wlbl_cmnd.AutoSize = true;
             this.wlbl_cmnd.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_cmnd.Location = new System.Drawing.Point(192, 435);
+            this.wlbl_cmnd.Location = new System.Drawing.Point(5, 383);
             this.wlbl_cmnd.Name = "wlbl_cmnd";
             this.wlbl_cmnd.Size = new System.Drawing.Size(118, 13);
             this.wlbl_cmnd.TabIndex = 16;
@@ -381,7 +384,7 @@
             // 
             this.wlbl_email.AutoSize = true;
             this.wlbl_email.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_email.Location = new System.Drawing.Point(214, 373);
+            this.wlbl_email.Location = new System.Drawing.Point(6, 321);
             this.wlbl_email.Name = "wlbl_email";
             this.wlbl_email.Size = new System.Drawing.Size(99, 13);
             this.wlbl_email.TabIndex = 15;
@@ -392,7 +395,7 @@
             // 
             this.wlbl_sodienthoai.AutoSize = true;
             this.wlbl_sodienthoai.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_sodienthoai.Location = new System.Drawing.Point(177, 311);
+            this.wlbl_sodienthoai.Location = new System.Drawing.Point(6, 259);
             this.wlbl_sodienthoai.Name = "wlbl_sodienthoai";
             this.wlbl_sodienthoai.Size = new System.Drawing.Size(136, 13);
             this.wlbl_sodienthoai.TabIndex = 14;
@@ -403,7 +406,7 @@
             // 
             this.wlbl_gioitinh.AutoSize = true;
             this.wlbl_gioitinh.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_gioitinh.Location = new System.Drawing.Point(200, 253);
+            this.wlbl_gioitinh.Location = new System.Drawing.Point(6, 201);
             this.wlbl_gioitinh.Name = "wlbl_gioitinh";
             this.wlbl_gioitinh.Size = new System.Drawing.Size(113, 13);
             this.wlbl_gioitinh.TabIndex = 13;
@@ -414,7 +417,7 @@
             // 
             this.wlbl_ngaysinh.AutoSize = true;
             this.wlbl_ngaysinh.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_ngaysinh.Location = new System.Drawing.Point(193, 172);
+            this.wlbl_ngaysinh.Location = new System.Drawing.Point(5, 120);
             this.wlbl_ngaysinh.Name = "wlbl_ngaysinh";
             this.wlbl_ngaysinh.Size = new System.Drawing.Size(120, 13);
             this.wlbl_ngaysinh.TabIndex = 12;
@@ -425,7 +428,7 @@
             // 
             this.wlbl_hoten.AutoSize = true;
             this.wlbl_hoten.ForeColor = System.Drawing.Color.Red;
-            this.wlbl_hoten.Location = new System.Drawing.Point(163, 101);
+            this.wlbl_hoten.Location = new System.Drawing.Point(5, 49);
             this.wlbl_hoten.Name = "wlbl_hoten";
             this.wlbl_hoten.Size = new System.Drawing.Size(150, 13);
             this.wlbl_hoten.TabIndex = 11;
@@ -435,7 +438,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 62);
+            this.label4.Location = new System.Drawing.Point(3, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 10;
@@ -443,17 +446,17 @@
             // 
             // btn_xoakhachhang
             // 
-            this.btn_xoakhachhang.Location = new System.Drawing.Point(238, 6);
+            this.btn_xoakhachhang.Location = new System.Drawing.Point(237, 407);
             this.btn_xoakhachhang.Name = "btn_xoakhachhang";
             this.btn_xoakhachhang.Size = new System.Drawing.Size(75, 23);
-            this.btn_xoakhachhang.TabIndex = 8;
+            this.btn_xoakhachhang.TabIndex = 10;
             this.btn_xoakhachhang.Text = "Xóa";
             this.btn_xoakhachhang.UseVisualStyleBackColor = true;
             this.btn_xoakhachhang.Visible = false;
             // 
             // btn_suakhachhang
             // 
-            this.btn_suakhachhang.Location = new System.Drawing.Point(119, 6);
+            this.btn_suakhachhang.Location = new System.Drawing.Point(118, 407);
             this.btn_suakhachhang.Name = "btn_suakhachhang";
             this.btn_suakhachhang.Size = new System.Drawing.Size(75, 23);
             this.btn_suakhachhang.TabIndex = 9;
@@ -463,10 +466,10 @@
             // 
             // btn_themkhachhang
             // 
-            this.btn_themkhachhang.Location = new System.Drawing.Point(3, 6);
+            this.btn_themkhachhang.Location = new System.Drawing.Point(2, 407);
             this.btn_themkhachhang.Name = "btn_themkhachhang";
             this.btn_themkhachhang.Size = new System.Drawing.Size(75, 23);
-            this.btn_themkhachhang.TabIndex = 7;
+            this.btn_themkhachhang.TabIndex = 8;
             this.btn_themkhachhang.Text = "Thêm";
             this.btn_themkhachhang.UseVisualStyleBackColor = true;
             this.btn_themkhachhang.Click += new System.EventHandler(this.btn_themkhachhang_Click);
@@ -486,6 +489,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Visible = false;
             // 
             // frmChonKhachHang
             // 

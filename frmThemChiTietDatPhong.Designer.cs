@@ -115,7 +115,7 @@
             this.lvPhong.Location = new System.Drawing.Point(0, 0);
             this.lvPhong.Name = "lvPhong";
             this.lvPhong.Size = new System.Drawing.Size(913, 384);
-            this.lvPhong.TabIndex = 4;
+            this.lvPhong.TabIndex = 3;
             this.lvPhong.UseCompatibleStateImageBehavior = false;
             this.lvPhong.View = System.Windows.Forms.View.Details;
             this.lvPhong.SelectedIndexChanged += new System.EventHandler(this.lvPhong_SelectedIndexChanged);
@@ -182,24 +182,28 @@
             // 
             // txt_idphong
             // 
+            this.txt_idphong.Enabled = false;
             this.txt_idphong.Location = new System.Drawing.Point(700, 32);
             this.txt_idphong.Name = "txt_idphong";
             this.txt_idphong.Size = new System.Drawing.Size(100, 20);
             this.txt_idphong.TabIndex = 6;
+            this.txt_idphong.Visible = false;
             // 
             // txt_iddondatphong
             // 
+            this.txt_iddondatphong.Enabled = false;
             this.txt_iddondatphong.Location = new System.Drawing.Point(604, 33);
             this.txt_iddondatphong.Name = "txt_iddondatphong";
             this.txt_iddondatphong.Size = new System.Drawing.Size(56, 20);
             this.txt_iddondatphong.TabIndex = 5;
+            this.txt_iddondatphong.Visible = false;
             // 
             // txt_tungay
             // 
             this.txt_tungay.Location = new System.Drawing.Point(12, 33);
             this.txt_tungay.Name = "txt_tungay";
             this.txt_tungay.Size = new System.Drawing.Size(200, 20);
-            this.txt_tungay.TabIndex = 2;
+            this.txt_tungay.TabIndex = 1;
             this.txt_tungay.ValueChanged += new System.EventHandler(this.txt_tungay_ValueChanged);
             // 
             // btn_chonphong
@@ -228,7 +232,7 @@
             this.txt_denngay.Location = new System.Drawing.Point(249, 33);
             this.txt_denngay.Name = "txt_denngay";
             this.txt_denngay.Size = new System.Drawing.Size(200, 20);
-            this.txt_denngay.TabIndex = 3;
+            this.txt_denngay.TabIndex = 2;
             this.txt_denngay.ValueChanged += new System.EventHandler(this.txt_denngay_ValueChanged);
             // 
             // label3

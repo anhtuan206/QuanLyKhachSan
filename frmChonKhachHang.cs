@@ -45,16 +45,17 @@ namespace QuanLyKhachSan
                 {
                     ListViewItem lvi = new ListViewItem(reader.GetInt32(0).ToString());
                     lvi.SubItems.Add(reader.GetString(1));
-                    lvi.SubItems.Add(reader.GetDateTime(2).ToString());
+                    lvi.SubItems.Add(reader.GetDateTime(2).ToString("dd/MM/yyyy"));
                     bool GioiTinh = reader.GetBoolean(3); lvi.SubItems.Add(GioiTinh ? "Nam" : "Nữ");
-                    lvi.SubItems.Add(reader.GetString(4).ToString());
                     lvi.SubItems.Add(reader.GetString(5).ToString());
+                    lvi.SubItems.Add(reader.GetString(4).ToString());
                     lvi.SubItems.Add(reader.GetString(6).ToString());
 
 
                     lvKhachHang.Items.Add(lvi);
                 }
                 reader.Close();
+                lvKhachHang.Columns[0].Width = 0;
             }
             catch { MessageBox.Show("Lỗi lấy danh sách khách hàng", "Thông báo"); }
         }
@@ -63,11 +64,14 @@ namespace QuanLyKhachSan
         {
             bool validateData = true;
             if (txt_hovaten.Text.Trim().Length <= 0) { validateData = false; wlbl_hoten.Visible = true; }
-            if (txt_ngaysinh.Text.Trim().Length <= 0) { validateData = false; wlbl_ngaysinh.Visible = true; }
+            if (txt_ngaysinh.Value==null) { validateData = false; wlbl_ngaysinh.Visible = true; }
             if (!radioNam.Checked && !radioNu.Checked) { validateData = false; wlbl_gioitinh.Visible = true; }
             if (txt_sdt.Text.Trim().Length <= 0) { validateData = false; wlbl_sodienthoai.Visible = true; }
             if (txt_email.Text.Trim().Length <= 0) { validateData = false; wlbl_email.Visible = true; }
             if (txt_cmnd.Text.Trim().Length <= 0) { validateData = false; wlbl_cmnd.Visible = true; }
+
+            if (DateTime.Now.Date< txt_ngaysinh.Value.Date) { wlbl_ngaysinh.Text = "Tuổi khách hàng không hợp lệ"; wlbl_ngaysinh.Visible = true; validateData = false; }
+
             if (!validateData) return;
 
 
@@ -78,7 +82,7 @@ namespace QuanLyKhachSan
                 SqlCommand cmd = new SqlCommand("prodThemKhachHang", gf.conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@HoVaten", txt_hovaten.Text);
-                cmd.Parameters.AddWithValue("@NgaySinh", txt_ngaysinh.Value);
+                cmd.Parameters.AddWithValue("@NgaySinh", txt_ngaysinh.Value.ToString("yyyy-MM-dd"));
                 cmd.Parameters.AddWithValue("@GioiTinh", radioNam.Checked);
                 cmd.Parameters.AddWithValue("@SDT", txt_sdt.Text);
                 cmd.Parameters.AddWithValue("@Email", txt_email.Text);
@@ -129,11 +133,13 @@ namespace QuanLyKhachSan
             {
                 txt_idkhachhang.Text = lvKhachHang.SelectedItems[0].SubItems[0].Text;
                 btn_chonkhachhang.Enabled = true;
+                btn_chonkhachhang.Focus();
             }
             else
             {
                 txt_idkhachhang.Text=null;
                 btn_chonkhachhang.Enabled = false;
+                txt_hovaten.Focus();
             }
         }
 

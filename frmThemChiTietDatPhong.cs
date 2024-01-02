@@ -33,10 +33,16 @@ namespace QuanLyKhachSan
             try
             {
                 string queryString = $@"SELECT dbo.Phong.SoPhong, dbo.TrangThaiPhong.TenTrangThai, dbo.Phong.Tang, dbo.Phong.DienThoai, dbo.LoaiPhong.LoaiPhong, dbo.LoaiPhong.SucChua, dbo.LoaiPhong.DonGia, dbo.Phong.IDPhong, dbo.TrangThaiPhong.IDTrangThai, dbo.LoaiPhong.IDLoaiPhong
-                        FROM dbo.TrangThaiPhong
-                        INNER JOIN dbo.Phong ON dbo.TrangThaiPhong.IDTrangThai = dbo.Phong.IDTrangThai 
-                        INNER JOIN dbo.LoaiPhong ON dbo.Phong.IDLoaiPhong = dbo.LoaiPhong.IDLoaiPhong
-                        WHERE dbo.Phong.IDPhong NOT IN (SELECT dbo.ChiTietDatPhong.IDPhong from ChiTietDatPhong WHERE dbo.ChiTietDatPhong.NgayNhanPhong<'{txt_tungay.Value.ToString("yyyy-MM-dd")}' AND dbo.ChiTietDatPhong.NgayTraPhong>'{txt_denngay.Value.ToString("yyyy-MM-dd")}')";
+                                        FROM dbo.TrangThaiPhong
+                                        INNER JOIN dbo.Phong ON dbo.TrangThaiPhong.IDTrangThai = dbo.Phong.IDTrangThai 
+                                        INNER JOIN dbo.LoaiPhong ON dbo.Phong.IDLoaiPhong = dbo.LoaiPhong.IDLoaiPhong
+                                        WHERE dbo.Phong.IDPhong NOT IN 
+	                                        (
+		                                        SELECT dbo.ChiTietDatPhong.IDPhong from ChiTietDatPhong 
+		                                        WHERE 1=1 
+			                                        AND ('{txt_tungay.Value.ToString("yyyy-MM-dd")}' > dbo.ChiTietDatPhong.NgayNhanPhong AND '{txt_denngay.Value.ToString("yyyy-MM-dd")}' < dbo.ChiTietDatPhong.NgayTraPhong)
+			                                        OR ('{txt_denngay.Value.ToString("yyyy-MM-dd")}' > dbo.ChiTietDatPhong.NgayNhanPhong AND '{txt_tungay.Value.ToString("yyyy-MM-dd")}' < dbo.ChiTietDatPhong.NgayTraPhong)
+                                            )";
                 SqlCommand sqlCmd = new SqlCommand(queryString, gf.conn);
                 sqlCmd.CommandType = CommandType.Text;
 
@@ -73,6 +79,9 @@ namespace QuanLyKhachSan
             {
                 MessageBox.Show("Lỗi lấy danh sách phòng trống", "Thông báo");
             }
+            lvPhong.Columns[7].Width = 0;
+            lvPhong.Columns[8].Width = 0;
+            lvPhong.Columns[9].Width = 0;
         }
 
         private void lvPhong_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,6 +102,7 @@ namespace QuanLyKhachSan
         {
             DanhSachPhongTrong();
             txt_iddondatphong.Text = frmQuanLyDatPhong.instance.txt_iddondatphong_shared.Text;
+            
         }
 
         private void btn_chonphong_Click(object sender, EventArgs e)
@@ -104,6 +114,8 @@ namespace QuanLyKhachSan
 
             try
             {
+                if (txt_tungay.Value.Date >= txt_denngay.Value.Date) { MessageBox.Show("Ngày trả phòng phải lớn hơn ngày nhận phòng", "Thông báo"); return; }
+
                 GlobalFuncs gf = new GlobalFuncs();
                 if (!gf.KetnoiCSDL()) { return; }
 

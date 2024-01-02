@@ -666,7 +666,7 @@ namespace QuanLyKhachSan
                 if (!gf.KetnoiCSDL()) { return; }
                 try
                 {
-                    string queryString = $@"SELECT KO.IDKhachO,KH.HoVaTen
+                    string queryString = $@"SELECT KO.IDKhachO,KH.HoVaTen, KH.SDT, KH.CMND
                             FROM KhachO AS KO
                             INNER JOIN ChiTietDatPhong CTDP ON CTDP.IDChiTietDatPhong=KO.IDChiTietDatPhong
                             INNER JOIN KhachHang KH ON KH.IDKhachHang=KO.IDKhachHang
@@ -679,6 +679,8 @@ namespace QuanLyKhachSan
                     {
                         ListViewItem lvi = new ListViewItem(reader.GetInt32(0).ToString());
                         lvi.SubItems.Add(reader.GetString(1));
+                        lvi.SubItems.Add(reader.GetString(2));
+                        lvi.SubItems.Add(reader.GetString(3));
 
                         lvKhachO.Items.Add(lvi);
                     }
@@ -850,8 +852,14 @@ namespace QuanLyKhachSan
 
         private void btn_themsudungdichvu_Click(object sender, EventArgs e)
         {
-            if (cbb_themsudungdichvu.SelectedIndex >=0 && Int32.Parse(txt_soluongsudungdichvu.Text)>=0)
+            if (cbb_themsudungdichvu.SelectedIndex >=0)
             {
+                if (txt_soluongsudungdichvu.Text.Length <= 0 || Int32.Parse(txt_soluongsudungdichvu.Text)<0) { MessageBox.Show("Vui lòng nhập số lượng", "Thông báo"); return; }
+
+                if (txt_ngaysudung.Value.Date < DateTime.ParseExact(lvChiTietDatPhong.SelectedItems[0].SubItems[0].Text,"dd/MM/yyyy",null).Date
+                    || txt_ngaysudung.Value.Date > DateTime.ParseExact(lvChiTietDatPhong.SelectedItems[0].SubItems[1].Text, "dd/MM/yyyy", null).Date)
+                { MessageBox.Show($@"Ngày sử dụng dịch vụ không hợp lệ", "Thông báo"); return; }
+
                 GlobalFuncs gf = new GlobalFuncs();
                 if (!gf.KetnoiCSDL()) return;
 
@@ -861,7 +869,7 @@ namespace QuanLyKhachSan
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@IDDichVu", cbb_themsudungdichvu.SelectedValue);
                     cmd.Parameters.AddWithValue("@SoLuong", Int32.Parse(txt_soluongsudungdichvu.Text));
-                    cmd.Parameters.AddWithValue("@NgaySuDung", DateTime.Now.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@NgaySuDung", txt_ngaysudung.Value.ToString("yyyy-MM-dd"));
                     cmd.Parameters.AddWithValue("@IDChiTietDatPhong", Int32.Parse(txt_idchitietdatphong.Text));
                     cmd.ExecuteNonQuery(); cmd.Dispose();
                 } catch { MessageBox.Show("Lỗi thêm sử dụng dịch vụ", "Thông báo"); }
@@ -880,12 +888,13 @@ namespace QuanLyKhachSan
             {
                 txt_soluongsudungdichvu.Enabled = true;
                 btn_themsudungdichvu.Enabled = true;
+                txt_ngaysudung.Enabled=true;
             }
             else
             {
                 txt_soluongsudungdichvu.Enabled = false;
                 btn_themsudungdichvu.Enabled = false;
-
+                txt_ngaysudung.Enabled = false;
             }
         }
     }

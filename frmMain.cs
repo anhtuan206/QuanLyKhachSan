@@ -37,7 +37,7 @@ namespace QuanLyKhachSan
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            OpenChildForm(new frmQuanLyDatPhong());
         }
 
         private void btnFrmBoPhan_Click(object sender, EventArgs e)
