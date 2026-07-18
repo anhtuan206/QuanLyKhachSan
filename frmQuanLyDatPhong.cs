@@ -897,5 +897,11 @@ namespace QuanLyKhachSan
                 txt_ngaysudung.Enabled = false;
             }
         }
+
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+            ThanhToan thanhToan = new ThanhToan();
+            thanhToan.ShowDialog();
+        }
     }
 }

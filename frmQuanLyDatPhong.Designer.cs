@@ -161,6 +161,7 @@
             this.btn_xoadichvu = new System.Windows.Forms.Button();
             this.btn_suadichvu = new System.Windows.Forms.Button();
             this.btn_themdichvu = new System.Windows.Forms.Button();
+            this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tab_quanlydatphong.SuspendLayout();
@@ -726,6 +727,7 @@
             // 
             // pan_dondatphong_ctrl
             // 
+            this.pan_dondatphong_ctrl.Controls.Add(this.btn_ThanhToan);
             this.pan_dondatphong_ctrl.Controls.Add(this.cbb_nhanviendatphong);
             this.pan_dondatphong_ctrl.Controls.Add(this.txt_tenkhachdatphong);
             this.pan_dondatphong_ctrl.Controls.Add(this.txt_idkhachdatphong);
@@ -750,7 +752,7 @@
             // cbb_nhanviendatphong
             // 
             this.cbb_nhanviendatphong.FormattingEnabled = true;
-            this.cbb_nhanviendatphong.Location = new System.Drawing.Point(88, 219);
+            this.cbb_nhanviendatphong.Location = new System.Drawing.Point(88, 192);
             this.cbb_nhanviendatphong.Name = "cbb_nhanviendatphong";
             this.cbb_nhanviendatphong.Size = new System.Drawing.Size(200, 21);
             this.cbb_nhanviendatphong.TabIndex = 4;
@@ -798,14 +800,14 @@
             // 
             this.txt_ghichu.Location = new System.Drawing.Point(88, 142);
             this.txt_ghichu.Name = "txt_ghichu";
-            this.txt_ghichu.Size = new System.Drawing.Size(200, 68);
+            this.txt_ghichu.Size = new System.Drawing.Size(200, 44);
             this.txt_ghichu.TabIndex = 3;
             this.txt_ghichu.Text = "";
             // 
             // btn_suadondatphong
             // 
             this.btn_suadondatphong.Enabled = false;
-            this.btn_suadondatphong.Location = new System.Drawing.Point(118, 260);
+            this.btn_suadondatphong.Location = new System.Drawing.Point(119, 224);
             this.btn_suadondatphong.Name = "btn_suadondatphong";
             this.btn_suadondatphong.Size = new System.Drawing.Size(75, 31);
             this.btn_suadondatphong.TabIndex = 6;
@@ -825,9 +827,9 @@
             // 
             // btn_themdondatphong
             // 
-            this.btn_themdondatphong.Location = new System.Drawing.Point(11, 260);
+            this.btn_themdondatphong.Location = new System.Drawing.Point(41, 224);
             this.btn_themdondatphong.Name = "btn_themdondatphong";
-            this.btn_themdondatphong.Size = new System.Drawing.Size(75, 31);
+            this.btn_themdondatphong.Size = new System.Drawing.Size(72, 31);
             this.btn_themdondatphong.TabIndex = 5;
             this.btn_themdondatphong.Text = "Thêm đơn";
             this.btn_themdondatphong.UseVisualStyleBackColor = true;
@@ -843,7 +845,7 @@
             // btn_xoadondatphong
             // 
             this.btn_xoadondatphong.Enabled = false;
-            this.btn_xoadondatphong.Location = new System.Drawing.Point(213, 260);
+            this.btn_xoadondatphong.Location = new System.Drawing.Point(200, 224);
             this.btn_xoadondatphong.Name = "btn_xoadondatphong";
             this.btn_xoadondatphong.Size = new System.Drawing.Size(75, 31);
             this.btn_xoadondatphong.TabIndex = 7;
@@ -854,7 +856,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 222);
+            this.label10.Location = new System.Drawing.Point(8, 195);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 13);
             this.label10.TabIndex = 5;
@@ -1423,6 +1425,16 @@
             this.btn_themdichvu.UseVisualStyleBackColor = true;
             this.btn_themdichvu.Click += new System.EventHandler(this.btn_themdichvu_Click);
             // 
+            // btn_ThanhToan
+            // 
+            this.btn_ThanhToan.Location = new System.Drawing.Point(41, 261);
+            this.btn_ThanhToan.Name = "btn_ThanhToan";
+            this.btn_ThanhToan.Size = new System.Drawing.Size(234, 30);
+            this.btn_ThanhToan.TabIndex = 13;
+            this.btn_ThanhToan.Text = "Thanh toán";
+            this.btn_ThanhToan.UseVisualStyleBackColor = true;
+            this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
+            // 
             // frmQuanLyDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1603,5 +1615,6 @@
         private System.Windows.Forms.DateTimePicker txt_ngaysudung;
         private System.Windows.Forms.ColumnHeader khacho_sdt;
         private System.Windows.Forms.ColumnHeader khacho_cmnd;
+        private System.Windows.Forms.Button btn_ThanhToan;
     }
 }
